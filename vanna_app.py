@@ -19,12 +19,25 @@ if sys.platform == 'win32':
 
 load_dotenv()
 
+import streamlit as st
+
 # =============================================================================
-# Configuration
+# Configuration - Handle both Streamlit Cloud (st.secrets) and local (.env)
 # =============================================================================
 
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://tasi:tasi_dev_123@localhost:5433/tasi_financials")
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "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")
+def get_config(key: str, default: str = None) -> str:
+    """Get config from Streamlit secrets first, then environment variables."""
+    # Try Streamlit secrets first (for Streamlit Cloud)
+    try:
+        if key in st.secrets:
+            return st.secrets[key]
+    except Exception:
+        pass
+    # Fall back to environment variables (for local development)
+    return os.getenv(key, default)
+
+DATABASE_URL = get_config("DATABASE_URL", "postgresql://tasi:tasi_dev_123@localhost:5433/tasi_financials")
+OPENROUTER_API_KEY = get_config("OPENROUTER_API_KEY")
 CHROMA_PERSIST_DIR = Path(__file__).parent / "chroma_db"
 
 
