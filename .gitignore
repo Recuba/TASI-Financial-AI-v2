@@ -1,6 +1,13 @@
-# Environment and secrets
+# =============================================================================
+# Venna AI - Git Ignore Configuration
+# =============================================================================
+
+# Environment and secrets (CRITICAL - never commit)
 .env
+.env.*
 *.env.local
+.streamlit/secrets.toml
+secrets.toml
 
 # Python
 __pycache__/
@@ -8,10 +15,29 @@ __pycache__/
 *$py.class
 *.so
 .Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
 venv/
 .venv/
 env/
 ENV/
+env.bak/
+venv.bak/
 
 # ChromaDB local storage
 chroma_db/
@@ -21,13 +47,56 @@ chroma_db/
 .vscode/
 *.swp
 *.swo
+*.sublime-project
+*.sublime-workspace
 
-# OS
+# OS files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+desktop.ini
 
 # Logs
 *.log
+logs/
+*.out
 
 # Docker volumes (local data)
 postgres_data/
+docker-data/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Large data files (keep CSV in repo for setup, but ignore large ones)
+# TASI_financials_DB.csv  # Keep this for initial setup
+*.csv.gz
+*.parquet
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+nul
+
+# Build artifacts
+*.manifest
+*.spec
+
+# Screenshots directory (placeholder files only)
+screenshots/*.png
+!screenshots/.gitkeep
