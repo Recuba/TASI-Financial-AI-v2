@@ -1,0 +1,130 @@
+{
+  "extraction_date": "2026-02-03",
+  "extraction_type": "banks",
+  "companies": [
+    {
+      "ticker": 1010,
+      "company_name": "Riyad Bank",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Riyad_Bank_FYE_2024.xlsx",
+      "financials": {
+        "net_loans": 320089491,
+        "total_assets": 450378794,
+        "total_deposits": 306423391,
+        "total_liabilities": 382436695,
+        "total_equity": 67942099,
+        "net_interest_income": 12873267,
+        "fee_income": 2990940,
+        "operating_income": 17284531,
+        "provisions_credit_losses": 1620728,
+        "net_income": 9321894
+      },
+      "extraction_notes": "All key fields extracted successfully"
+    },
+    {
+      "ticker": 1140,
+      "company_name": "Bank Albilad",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Bank_Albilad_FYE_2024.xlsx",
+      "financials": {
+        "net_loans": 109304086,
+        "total_assets": 154964687,
+        "total_deposits": 121776215,
+        "total_liabilities": 138271457,
+        "total_equity": 16693230,
+        "net_interest_income": 4433603,
+        "fee_income": 700515,
+        "operating_income": 5671879,
+        "provisions_credit_losses": 129688,
+        "net_income": 2806531
+      },
+      "extraction_notes": "All key fields extracted successfully"
+    },
+    {
+      "ticker": 1020,
+      "company_name": "Bank Aljazira",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Bank_Aljazira_FYE_2024.xlsx",
+      "financials": {
+        "net_loans": 96912496,
+        "total_assets": 148906068,
+        "total_deposits": 108186514,
+        "total_liabilities": 131704371,
+        "total_equity": 17201697,
+        "net_interest_income": 2634422,
+        "operating_income": 3779397,
+        "provisions_credit_losses": 317460,
+        "net_income": 1230954,
+        "fee_income": null
+      },
+      "extraction_notes": "Missing fields: fee_income"
+    },
+    {
+      "ticker": 1030,
+      "company_name": "Saudi Investment Bank",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Saudi_Investment_Bank_FYE_2024.xlsx",
+      "financials": {
+        "net_loans": 99466490,
+        "total_assets": 156666688,
+        "total_deposits": 94013131,
+        "total_liabilities": 135938074,
+        "total_equity": 20728614,
+        "net_interest_income": 3536692,
+        "fee_income": 757594,
+        "operating_income": 4178048,
+        "net_income": 1956630
+      },
+      "extraction_notes": "All key fields extracted successfully"
+    },
+    {
+      "ticker": 1150,
+      "company_name": "Alinma Bank",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Alinma_Bank_FYE_2024.xlsx",
+      "financials": {
+        "net_loans": 202308094,
+        "total_assets": 276827481,
+        "total_deposits": 210544650,
+        "total_liabilities": 235385706,
+        "total_equity": 41441775,
+        "net_interest_income": 8648629,
+        "operating_income": 10940076,
+        "provisions_credit_losses": 1049809,
+        "net_income": 5831661
+      },
+      "extraction_notes": "Missing fields: fee_income"
+    },
+    {
+      "ticker": 1060,
+      "company_name": "Saudi Awwal Bank",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Saudi_Awwal_Bank_FYE_2024.xlsx",
+      "financials": {
+        "net_loans": 259345516,
+        "total_assets": 399442809,
+        "total_deposits": 267010659,
+        "total_liabilities": 331156626,
+        "total_equity": 68286183,
+        "net_interest_income": 11023500,
+        "fee_income": 1449562,
+        "operating_income": 14017672,
+        "provisions_credit_losses": 566063,
+        "net_income": 8070461
+      },
+      "extraction_notes": "All key fields extracted successfully"
+    }
+  ]
+}

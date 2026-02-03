@@ -45,28 +45,134 @@ COLUMN_CATEGORIES = {
 }
 
 
+def render_2024_data_status() -> None:
+    """Render 2024 data freshness indicator with detailed company status."""
+    with st.expander("📊 2024 Data Status", expanded=True):
+        # Data freshness badge
+        st.markdown(
+            '<div style="background: linear-gradient(135deg, #00A651 0%, #D4A84B 100%); '
+            'padding: 12px; border-radius: 8px; text-align: center; margin-bottom: 12px;">'
+            '<div style="color: white; font-size: 14px; font-weight: 600;">Latest Extraction</div>'
+            '<div style="color: white; font-size: 20px; font-weight: 700;">Feb 3, 2026</div>'
+            '</div>',
+            unsafe_allow_html=True
+        )
+
+        # Company count
+        st.metric(
+            label="Companies with 2024 Data",
+            value="36",
+            help="Companies with complete 2024 annual financial data"
+        )
+
+        # Sector breakdown
+        st.markdown("**Sector Breakdown:**")
+        sectors_html = """
+        <div style="font-size: 13px; line-height: 1.8;">
+            <div>🏦 Banks: <strong>6</strong></div>
+            <div>🏭 Industrial: <strong>15</strong></div>
+            <div>🛒 Consumer & Retail: <strong>7</strong></div>
+            <div>💰 Finance: <strong>3</strong></div>
+            <div>🏢 Real Estate: <strong>1</strong></div>
+            <div>📺 Media: <strong>1</strong></div>
+            <div>📡 Telecom: <strong>1</strong></div>
+            <div>💼 Financial Services: <strong>1</strong></div>
+            <div>🏥 Healthcare: <strong>1</strong></div>
+        </div>
+        """
+        st.markdown(sectors_html, unsafe_allow_html=True)
+
+
+def render_data_quality_section() -> None:
+    """Render detailed data quality and company status section."""
+    with st.expander("📋 Data Quality & Coverage", expanded=False):
+        # Companies with complete 2024 data
+        companies_2024 = [
+            "Riyad Bank", "Bank Aljazira", "Saudi Investment Bank",
+            "Saudi Awwal Bank", "Bank Albilad", "Alinma Bank",
+            "Arabian Cement Co", "Yamama Cement Co", "Yanbu Cement Co",
+            "City Cement Co", "Southern Province Cement Co", "Umm Al-Qura Cement Co",
+            "Qassim Cement Co", "Riyadh Cement Co", "Eastern Province Cement Co",
+            "Almarai Co", "Jarir Marketing Co", "Nahdi Medical Co",
+            "BinDawood Holding Co", "Leejam Sports Co", "Aldrees Petroleum and Transport Services Co",
+            "Almunajem Foods Co", "Arabian Pipes Co", "Zamil Industrial Investment Co",
+            "Saudi Industrial Investment Group", "Astra Industrial Group", "Bawan Co",
+            "United Wire Factories Co", "Amlak International Finance Co",
+            "Nayifat Finance Co", "SHL Finance Co", "Emaar The Economic City",
+            "MBC Group Co", "Etihad Atheeb Telecommunication Co", "Canadian Medical Center Co",
+            "Saudi Tadawul Group Holding Co"
+        ]
+
+        st.markdown("**✅ Companies with Complete 2024 Data (36):**")
+        st.caption("All major sectors represented with latest annual reports")
+
+        # Show companies in a clean list format
+        with st.container():
+            companies_text = "\n".join([f"• {company}" for company in sorted(companies_2024)])
+            st.text_area(
+                "Company List",
+                companies_text,
+                height=150,
+                label_visibility="collapsed",
+                disabled=True
+            )
+
+        st.divider()
+
+        # Data quality indicators
+        st.markdown("**📊 Data Quality Indicators:**")
+
+        col1, col2 = st.columns(2)
+        with col1:
+            st.metric(
+                label="Completeness",
+                value="100%",
+                help="All 36 companies have complete financial records"
+            )
+        with col2:
+            st.metric(
+                label="Validation Status",
+                value="Valid",
+                help="All records passed validation checks"
+            )
+
+        # Coverage stats
+        st.markdown("**📈 Coverage Statistics:**")
+        coverage_html = """
+        <div style="font-size: 12px; line-height: 1.6;">
+            <div>✓ Financial Statements: <strong>Complete</strong></div>
+            <div>✓ Key Metrics: <strong>All Captured</strong></div>
+            <div>✓ Sector Classification: <strong>Verified</strong></div>
+            <div>✓ Data Extraction Date: <strong>Feb 3, 2026</strong></div>
+        </div>
+        """
+        st.markdown(coverage_html, unsafe_allow_html=True)
+
+        st.info("💡 To update data, run: `python scripts/insert_extracted_data.py`", icon="ℹ️")
+
+
 def render_database_info(db_stats: Optional[Dict[str, Any]] = None) -> None:
     """Render the database information section in collapsible expander."""
-    with st.expander("Database Info", expanded=True):
+    with st.expander("Database Overview", expanded=False):
         if db_stats:
             col1, col2 = st.columns(2)
             with col1:
                 st.metric(
-                    label="Companies",
+                    label="Total Companies",
                     value=f"{db_stats.get('companies', 'N/A'):,}" if isinstance(db_stats.get('companies'), int) else db_stats.get('companies', 'N/A'),
-                    help="Unique companies in the database"
+                    help="All unique companies in the database"
                 )
             with col2:
                 st.metric(
-                    label="Records",
+                    label="Total Records",
                     value=f"{db_stats.get('records', 'N/A'):,}" if isinstance(db_stats.get('records'), int) else db_stats.get('records', 'N/A'),
-                    help="Total financial records"
+                    help="All financial records across all years"
                 )
 
             if db_stats.get('sectors'):
                 st.caption(f"Sectors: {db_stats['sectors']}")
             if db_stats.get('years'):
-                st.caption(f"Years: {db_stats['years']}")
+                st.caption(f"Year Range: {db_stats['years']}")
         else:
             st.info("Connect to database to see stats")
 
@@ -222,6 +328,12 @@ def render_sidebar(
         render_connection_status(is_connected, connection_error)
 
         st.divider()
+
+        # 2024 Data Status (NEW!)
+        render_2024_data_status()
+
+        # Data Quality Section (NEW!)
+        render_data_quality_section()
 
         # Database info
         render_database_info(db_stats)

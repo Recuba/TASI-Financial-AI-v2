@@ -1,0 +1,739 @@
+{
+  "metadata": {
+    "generated_date": "2026-02-03",
+    "source": "TASI Financial Database Analysis",
+    "description": "Classification of TASI-listed companies by type, with special focus on banks and insurance companies that require different financial metrics"
+  },
+  "institution_types": {
+    "BANK": {
+      "description": "Commercial and retail banks - use Net Interest Income instead of Revenue",
+      "required_metrics": [
+        "net_interest_income",
+        "fee_income",
+        "trading_income",
+        "total_operating_income",
+        "operating_expenses",
+        "provisions",
+        "net_profit",
+        "total_assets",
+        "total_loans",
+        "total_deposits",
+        "total_equity",
+        "tier1_capital",
+        "risk_weighted_assets",
+        "non_performing_loans"
+      ],
+      "key_ratios": [
+        "net_interest_margin",
+        "cost_to_income_ratio",
+        "loan_to_deposit_ratio",
+        "npl_ratio",
+        "capital_adequacy_ratio",
+        "tier1_ratio",
+        "return_on_equity",
+        "return_on_assets"
+      ]
+    },
+    "INSURANCE": {
+      "description": "Insurance and reinsurance companies - use Gross Written Premiums instead of Revenue",
+      "required_metrics": [
+        "gross_written_premiums",
+        "net_written_premiums",
+        "net_earned_premiums",
+        "claims_incurred",
+        "policy_acquisition_costs",
+        "operating_expenses",
+        "investment_income",
+        "net_profit",
+        "total_assets",
+        "total_equity",
+        "technical_reserves"
+      ],
+      "key_ratios": [
+        "loss_ratio",
+        "expense_ratio",
+        "combined_ratio",
+        "retention_ratio",
+        "return_on_equity",
+        "return_on_assets",
+        "solvency_ratio"
+      ]
+    },
+    "FINANCE": {
+      "description": "Non-bank financial institutions - mortgage, consumer finance",
+      "required_metrics": [
+        "interest_income",
+        "fee_income",
+        "net_profit",
+        "total_assets",
+        "total_equity",
+        "loan_portfolio"
+      ],
+      "key_ratios": [
+        "net_interest_margin",
+        "return_on_equity",
+        "return_on_assets",
+        "cost_to_income_ratio"
+      ]
+    },
+    "STANDARD": {
+      "description": "Industrial, service, and other non-financial companies",
+      "required_metrics": [
+        "revenue",
+        "cost_of_sales",
+        "gross_profit",
+        "operating_profit",
+        "net_profit",
+        "total_assets",
+        "total_equity"
+      ],
+      "key_ratios": [
+        "gross_margin",
+        "operating_margin",
+        "net_margin",
+        "return_on_equity",
+        "return_on_assets",
+        "debt_to_equity"
+      ]
+    }
+  },
+  "banks": {
+    "1010": {
+      "ticker": 1010,
+      "name": "Riyad Bank",
+      "name_ar": "بنك الرياض",
+      "type": "BANK",
+      "sub_type": "Commercial Bank",
+      "listing_date": "1983-01-01",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "SAMA",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "data_quality_score": 7,
+        "notes": "Bank - requires special metrics extraction"
+      }
+    },
+    "1020": {
+      "ticker": 1020,
+      "name": "Bank Aljazira",
+      "name_ar": "بنك الجزيرة",
+      "type": "BANK",
+      "sub_type": "Islamic Bank",
+      "listing_date": "1997-01-01",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "SAMA",
+      "data_status": {
+        "has_2024_annual": true,
+        "has_null_revenue": true,
+        "data_quality_score": 7,
+        "notes": "Islamic bank - requires special metrics extraction"
+      }
+    },
+    "1030": {
+      "ticker": 1030,
+      "name": "Saudi Investment Bank",
+      "name_ar": "البنك السعودي للاستثمار",
+      "type": "BANK",
+      "sub_type": "Commercial Bank",
+      "listing_date": "1988-01-01",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "SAMA",
+      "data_status": {
+        "has_2024_annual": true,
+        "has_null_revenue": true,
+        "data_quality_score": 7,
+        "notes": "Bank - requires special metrics extraction"
+      }
+    },
+    "1050": {
+      "ticker": 1050,
+      "name": "Banque Saudi Fransi",
+      "name_ar": "البنك السعودي الفرنسي",
+      "type": "BANK",
+      "sub_type": "Commercial Bank",
+      "listing_date": "1977-01-01",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "SAMA",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "data_quality_score": 7,
+        "notes": "Bank - requires special metrics extraction, MISSING 2024 DATA"
+      }
+    },
+    "1060": {
+      "ticker": 1060,
+      "name": "Saudi Awwal Bank",
+      "name_ar": "البنك الأول",
+      "former_name": "Saudi British Bank",
+      "type": "BANK",
+      "sub_type": "Commercial Bank",
+      "listing_date": "1977-01-01",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "SAMA",
+      "data_status": {
+        "has_2024_annual": true,
+        "has_null_revenue": true,
+        "data_quality_score": 7,
+        "notes": "Bank - requires special metrics extraction. Rebranded from Saudi British Bank in 2019"
+      }
+    },
+    "1080": {
+      "ticker": 1080,
+      "name": "Arab National Bank",
+      "name_ar": "البنك العربي الوطني",
+      "type": "BANK",
+      "sub_type": "Commercial Bank",
+      "listing_date": "1980-01-01",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "SAMA",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "data_quality_score": 7,
+        "notes": "Bank - requires special metrics extraction, MISSING 2024 DATA"
+      }
+    },
+    "1120": {
+      "ticker": 1120,
+      "name": "Al Rajhi Bank",
+      "name_ar": "مصرف الراجحي",
+      "type": "BANK",
+      "sub_type": "Islamic Bank",
+      "listing_date": "1988-01-01",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "SAMA",
+      "market_cap_rank": "Top 5",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "data_quality_score": 7,
+        "notes": "Largest Islamic bank globally - CRITICAL: MISSING 2024 DATA"
+      }
+    },
+    "1140": {
+      "ticker": 1140,
+      "name": "Bank Albilad",
+      "name_ar": "بنك البلاد",
+      "type": "BANK",
+      "sub_type": "Islamic Bank",
+      "listing_date": "2005-01-01",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "SAMA",
+      "data_status": {
+        "has_2024_annual": true,
+        "has_null_revenue": true,
+        "data_quality_score": 7,
+        "notes": "Islamic bank - requires special metrics extraction"
+      }
+    },
+    "1150": {
+      "ticker": 1150,
+      "name": "Alinma Bank",
+      "name_ar": "مصرف الإنماء",
+      "type": "BANK",
+      "sub_type": "Islamic Bank",
+      "listing_date": "2008-01-01",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "SAMA",
+      "data_status": {
+        "has_2024_annual": true,
+        "has_null_revenue": true,
+        "data_quality_score": 7,
+        "notes": "Islamic bank - requires special metrics extraction"
+      }
+    },
+    "1180": {
+      "ticker": 1180,
+      "name": "The Saudi National Bank",
+      "name_ar": "البنك الأهلي السعودي",
+      "former_name": "National Commercial Bank",
+      "type": "BANK",
+      "sub_type": "Commercial Bank",
+      "listing_date": "2014-01-01",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "SAMA",
+      "market_cap_rank": "Top 3",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "data_quality_score": 7,
+        "notes": "Largest bank in Saudi Arabia - CRITICAL: MISSING 2024 DATA. Merged with Samba in 2021"
+      }
+    }
+  },
+  "insurance_companies": {
+    "8010": {
+      "ticker": 8010,
+      "name": "The Company for Cooperative Insurance",
+      "name_ar": "الشركة التعاونية للتأمين",
+      "short_name": "Tawuniya",
+      "type": "INSURANCE",
+      "sub_type": "Multi-line Insurance",
+      "listing_date": "2005-01-01",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "market_cap_rank": "Top Insurance",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "notes": "Largest insurer - MISSING 2024 DATA"
+      }
+    },
+    "8012": {
+      "ticker": 8012,
+      "name": "Aljazira Takaful Taawuni Co.",
+      "name_ar": "الجزيرة تكافل تعاوني",
+      "type": "INSURANCE",
+      "sub_type": "Takaful (Islamic Insurance)",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "notes": "Islamic insurance - MISSING 2024 DATA"
+      }
+    },
+    "8020": {
+      "ticker": 8020,
+      "name": "Malath Cooperative Insurance Co.",
+      "name_ar": "ملاذ للتأمين التعاوني",
+      "type": "INSURANCE",
+      "sub_type": "Multi-line Insurance",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "notes": "MISSING 2024 DATA"
+      }
+    },
+    "8030": {
+      "ticker": 8030,
+      "name": "The Mediterranean and Gulf Insurance and Reinsurance Co.",
+      "name_ar": "ميدغلف للتأمين",
+      "short_name": "MedGulf",
+      "type": "INSURANCE",
+      "sub_type": "Multi-line Insurance and Reinsurance",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "data_quality_score": 13,
+        "notes": "MISSING 2024 DATA"
+      }
+    },
+    "8040": {
+      "ticker": 8040,
+      "name": "Allianz Saudi Fransi Cooperative Insurance Co.",
+      "name_ar": "أليانز السعودي الفرنسي للتأمين التعاوني",
+      "type": "INSURANCE",
+      "sub_type": "Multi-line Insurance",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "notes": "MISSING 2024 DATA"
+      }
+    },
+    "8050": {
+      "ticker": 8050,
+      "name": "Salama Cooperative Insurance Co.",
+      "name_ar": "سلامة للتأمين التعاوني",
+      "type": "INSURANCE",
+      "sub_type": "Takaful (Islamic Insurance)",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "notes": "MISSING 2024 DATA"
+      }
+    },
+    "8060": {
+      "ticker": 8060,
+      "name": "Walaa Cooperative Insurance Co.",
+      "name_ar": "ولاء للتأمين",
+      "type": "INSURANCE",
+      "sub_type": "Multi-line Insurance",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "data_quality_score": 13,
+        "notes": "MISSING 2024 DATA"
+      }
+    },
+    "8070": {
+      "ticker": 8070,
+      "name": "Arabian Shield Cooperative Insurance Co.",
+      "name_ar": "الدرع العربي للتأمين التعاوني",
+      "type": "INSURANCE",
+      "sub_type": "Multi-line Insurance",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "notes": "MISSING 2024 DATA"
+      }
+    },
+    "8100": {
+      "ticker": 8100,
+      "name": "Saudi Arabian Cooperative Insurance Co.",
+      "name_ar": "التأمين العربية السعودية التعاونية",
+      "short_name": "SAICO",
+      "type": "INSURANCE",
+      "sub_type": "Multi-line Insurance",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "notes": "MISSING 2024 DATA"
+      }
+    },
+    "8120": {
+      "ticker": 8120,
+      "name": "Gulf Union Cooperative Insurance Co.",
+      "name_ar": "اتحاد الخليج الأهلية للتأمين التعاوني",
+      "type": "INSURANCE",
+      "sub_type": "Multi-line Insurance",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "notes": "MISSING 2024 DATA"
+      }
+    },
+    "8150": {
+      "ticker": 8150,
+      "name": "Allied Cooperative Insurance Group",
+      "name_ar": "أسيج للتأمين التعاوني",
+      "short_name": "ACIG",
+      "type": "INSURANCE",
+      "sub_type": "Multi-line Insurance",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "notes": "MISSING 2024 DATA"
+      }
+    },
+    "8160": {
+      "ticker": 8160,
+      "name": "Arabia Insurance Cooperative Co.",
+      "name_ar": "العربية للتأمين التعاوني",
+      "type": "INSURANCE",
+      "sub_type": "Multi-line Insurance",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "notes": "MISSING 2024 DATA"
+      }
+    },
+    "8170": {
+      "ticker": 8170,
+      "name": "Al-Etihad Cooperative Insurance Co.",
+      "name_ar": "الاتحاد التجاري للتأمين التعاوني",
+      "type": "INSURANCE",
+      "sub_type": "Multi-line Insurance",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "notes": "MISSING 2024 DATA"
+      }
+    },
+    "8180": {
+      "ticker": 8180,
+      "name": "Al Sagr Cooperative Insurance Co.",
+      "name_ar": "الصقر للتأمين التعاوني",
+      "type": "INSURANCE",
+      "sub_type": "Multi-line Insurance",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "notes": "MISSING 2024 DATA"
+      }
+    },
+    "8190": {
+      "ticker": 8190,
+      "name": "United Cooperative Assurance Co.",
+      "name_ar": "المتحدة للتأمين التعاوني",
+      "short_name": "UCA",
+      "type": "INSURANCE",
+      "sub_type": "Multi-line Insurance",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "notes": "MISSING 2024 DATA"
+      }
+    },
+    "8200": {
+      "ticker": 8200,
+      "name": "Saudi Re for Cooperative Reinsurance Co.",
+      "name_ar": "السعودية لإعادة التأمين التعاوني",
+      "short_name": "Saudi Re",
+      "type": "INSURANCE",
+      "sub_type": "Reinsurance",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "notes": "Reinsurance company - MISSING 2024 DATA"
+      }
+    },
+    "8230": {
+      "ticker": 8230,
+      "name": "Al-Rajhi Company for Cooperative Insurance",
+      "name_ar": "الراجحي للتأمين التعاوني",
+      "type": "INSURANCE",
+      "sub_type": "Takaful (Islamic Insurance)",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "notes": "Islamic insurance - MISSING 2024 DATA"
+      }
+    },
+    "8240": {
+      "ticker": 8240,
+      "name": "CHUBB Arabia Cooperative Insurance Co.",
+      "name_ar": "تشب العربية للتأمين التعاوني",
+      "type": "INSURANCE",
+      "sub_type": "Multi-line Insurance",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "notes": "MISSING 2024 DATA"
+      }
+    },
+    "8250": {
+      "ticker": 8250,
+      "name": "AXA Cooperative Insurance Co.",
+      "name_ar": "أكسا للتأمين التعاوني",
+      "former_name": "Gulf Insurance Group",
+      "type": "INSURANCE",
+      "sub_type": "Multi-line Insurance",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "notes": "MISSING 2024 DATA"
+      }
+    },
+    "8260": {
+      "ticker": 8260,
+      "name": "Gulf General Cooperative Insurance Co.",
+      "name_ar": "الخليج العامة للتأمين التعاوني",
+      "type": "INSURANCE",
+      "sub_type": "Multi-line Insurance",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "notes": "MISSING 2024 DATA"
+      }
+    },
+    "8280": {
+      "ticker": 8280,
+      "name": "Al Alamiya for Cooperative Insurance Co.",
+      "name_ar": "العالمية للتأمين التعاوني",
+      "type": "INSURANCE",
+      "sub_type": "Multi-line Insurance",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "notes": "MISSING 2024 DATA"
+      }
+    },
+    "8300": {
+      "ticker": 8300,
+      "name": "Wataniya Insurance Co.",
+      "name_ar": "الوطنية للتأمين",
+      "type": "INSURANCE",
+      "sub_type": "Multi-line Insurance",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "notes": "MISSING 2024 DATA"
+      }
+    },
+    "8310": {
+      "ticker": 8310,
+      "name": "Amana Cooperative Insurance Co.",
+      "name_ar": "أمانة للتأمين التعاوني",
+      "type": "INSURANCE",
+      "sub_type": "Multi-line Insurance",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "notes": "MISSING 2024 DATA"
+      }
+    },
+    "8311": {
+      "ticker": 8311,
+      "name": "Saudi Enaya Cooperative Insurance Co.",
+      "name_ar": "عناية السعودية للتأمين التعاوني",
+      "type": "INSURANCE",
+      "sub_type": "Health Insurance",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "Insurance Authority",
+      "data_status": {
+        "has_2024_annual": false,
+        "has_null_revenue": true,
+        "notes": "Health insurance focus - MISSING 2024 DATA"
+      }
+    }
+  },
+  "finance_companies": {
+    "1182": {
+      "ticker": 1182,
+      "name": "Amlak International Finance Co.",
+      "name_ar": "أملاك العالمية للتمويل",
+      "type": "FINANCE",
+      "sub_type": "Real Estate Finance",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "SAMA",
+      "data_status": {
+        "has_2024_annual": true,
+        "has_null_revenue": true,
+        "data_quality_score": 7,
+        "notes": "Real estate finance company - requires special metrics"
+      }
+    },
+    "1183": {
+      "ticker": 1183,
+      "name": "Saudi Home Loans Co.",
+      "name_ar": "الشركة السعودية للتمويل العقاري",
+      "short_name": "SHL Finance",
+      "type": "FINANCE",
+      "sub_type": "Mortgage Finance",
+      "market": "Main Market",
+      "reporting_standard": "IFRS",
+      "regulator": "SAMA",
+      "data_status": {
+        "has_2024_annual": true,
+        "has_null_revenue": true,
+        "data_quality_score": 7,
+        "notes": "Mortgage finance company - requires special metrics"
+      }
+    }
+  },
+  "summary": {
+    "total_banks": 10,
+    "total_insurance_companies": 24,
+    "total_finance_companies": 2,
+    "total_financial_institutions": 36,
+    "banks_missing_2024_data": ["1050", "1080", "1120", "1180"],
+    "insurance_missing_2024_data": [
+      "8010", "8012", "8020", "8030", "8040", "8050", "8060", "8070",
+      "8100", "8120", "8150", "8160", "8170", "8180", "8190", "8200",
+      "8230", "8240", "8250", "8260", "8280", "8300", "8310", "8311"
+    ],
+    "critical_priority_companies": [
+      {
+        "ticker": 1120,
+        "name": "Al Rajhi Bank",
+        "reason": "Largest Islamic bank globally, missing 2024 data"
+      },
+      {
+        "ticker": 1180,
+        "name": "The Saudi National Bank",
+        "reason": "Largest bank in Saudi Arabia, missing 2024 data"
+      },
+      {
+        "ticker": 8010,
+        "name": "The Company for Cooperative Insurance (Tawuniya)",
+        "reason": "Largest insurer in Saudi Arabia, missing 2024 data"
+      }
+    ]
+  },
+  "metric_mapping": {
+    "revenue_equivalent": {
+      "BANK": "net_interest_income + fee_income + trading_income",
+      "INSURANCE": "gross_written_premiums",
+      "FINANCE": "interest_income + fee_income",
+      "STANDARD": "revenue"
+    },
+    "profitability_ratios": {
+      "BANK": ["net_interest_margin", "cost_to_income_ratio", "roe", "roa"],
+      "INSURANCE": ["loss_ratio", "combined_ratio", "roe", "roa"],
+      "FINANCE": ["net_interest_margin", "roe", "roa"],
+      "STANDARD": ["gross_margin", "operating_margin", "net_margin", "roe", "roa"]
+    },
+    "leverage_ratios": {
+      "BANK": ["loan_to_deposit_ratio", "capital_adequacy_ratio", "tier1_ratio"],
+      "INSURANCE": ["solvency_ratio", "retention_ratio"],
+      "FINANCE": ["debt_to_equity", "loan_portfolio_to_equity"],
+      "STANDARD": ["debt_to_equity", "debt_to_assets"]
+    },
+    "quality_ratios": {
+      "BANK": ["npl_ratio", "coverage_ratio"],
+      "INSURANCE": ["claims_ratio", "expense_ratio"],
+      "FINANCE": ["npl_ratio"],
+      "STANDARD": ["asset_turnover", "inventory_turnover"]
+    }
+  }
+}

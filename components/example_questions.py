@@ -9,6 +9,33 @@ from typing import Optional
 
 # Example questions organized by category
 EXAMPLE_QUESTIONS = {
+    "2024 Data": [
+        {
+            "label": "Bank performance in 2024",
+            "query": "Show me bank performance in 2024",
+            "icon": "account_balance"
+        },
+        {
+            "label": "Compare Riyad vs Alinma 2024",
+            "query": "Compare Riyad Bank vs Alinma Bank 2024",
+            "icon": "compare_arrows"
+        },
+        {
+            "label": "Industrial companies with 2024",
+            "query": "Which industrial companies have 2024 data?",
+            "icon": "factory"
+        },
+        {
+            "label": "Top 5 cement companies 2024",
+            "query": "Show me the top 5 cement companies by revenue in 2024",
+            "icon": "construction"
+        },
+        {
+            "label": "All companies with 2024 data",
+            "query": "List all companies with 2024 annual data",
+            "icon": "new_releases"
+        },
+    ],
     "Popular": [
         {
             "label": "Top 10 companies by revenue",
@@ -97,11 +124,11 @@ def render_example_questions(max_visible: int = 3) -> Optional[str]:
     # Show a few examples prominently
     st.subheader("Try an Example")
 
-    # Display first few examples as prominent buttons
-    popular = EXAMPLE_QUESTIONS["Popular"][:max_visible]
+    # Display first few 2024 examples as prominent buttons (NEW!)
+    featured_2024 = EXAMPLE_QUESTIONS["2024 Data"][:max_visible]
 
-    cols = st.columns(len(popular))
-    for i, example in enumerate(popular):
+    cols = st.columns(len(featured_2024))
+    for i, example in enumerate(featured_2024):
         with cols[i]:
             btn_key = f"example_prominent_{i}"
             is_active = st.session_state.get("active_example") == btn_key
@@ -121,7 +148,7 @@ def render_example_questions(max_visible: int = 3) -> Optional[str]:
     # More examples in expander
     with st.expander("More Examples", expanded=False):
         for category, questions in EXAMPLE_QUESTIONS.items():
-            if category == "Popular":
+            if category == "2024 Data":
                 # Skip first 3 already shown
                 remaining = questions[max_visible:]
                 if not remaining:

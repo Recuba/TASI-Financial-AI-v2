@@ -1,0 +1,351 @@
+{
+  "extraction_date": "2026-02-03",
+  "extraction_type": "other_sectors",
+  "companies": [
+    {
+      "ticker": 4081,
+      "company_name": "Nayifat Finance Co",
+      "sector": "Finance",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Nayifat_Finance_Co_FYE_2024.xlsx",
+      "financials": {
+        "revenue": 362559.0,
+        "ebit": 148986.0,
+        "net_income": 131236.0,
+        "total_assets": 2064758.0,
+        "total_liabilities": 616773.0,
+        "total_equity": 1447985.0,
+        "cash": 86476.0
+      },
+      "extraction_notes": null
+    },
+    {
+      "ticker": 1183,
+      "company_name": "SHL Finance Co",
+      "sector": "Finance",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "SHL_Finance_Co_FYE_2024.xlsx",
+      "financials": {
+        "revenue": 350474.0,
+        "operating_income": -116370.0,
+        "ebit": 33899.0,
+        "net_income": 26528.0,
+        "total_assets": 4513467.0,
+        "total_liabilities": 2825829.0,
+        "total_equity": 1687638.0,
+        "cash": 69189.0
+      },
+      "extraction_notes": null
+    },
+    {
+      "ticker": 1182,
+      "company_name": "Amlak International Finance Co",
+      "sector": "Finance",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Amlak_International_Finance_Co_FYE_2024.xlsx",
+      "financials": {
+        "revenue": 433343.0,
+        "operating_income": -185829.0,
+        "ebit": 58633.0,
+        "net_income": 46314.0,
+        "total_assets": 4512211.0,
+        "total_liabilities": 3287492.0,
+        "total_equity": 1224719.0,
+        "cash": 32360.0
+      },
+      "extraction_notes": null
+    },
+    {
+      "ticker": 7040,
+      "company_name": "Etihad Atheeb Telecommunication Co",
+      "sector": "Telecom",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "reporting_unit": "units",
+      "source_file": "Etihad_Atheeb_Telecommunication_Co_FYE_2024.xlsx",
+      "financials": {
+        "revenue": 1016118736.0,
+        "gross_profit": 305470474.0,
+        "operating_income": 305470474.0,
+        "ebit": 200663054.0,
+        "net_income": 194678385.0,
+        "total_assets": 1367348392.0,
+        "total_liabilities": 808435311.0,
+        "total_equity": 558913081.0,
+        "cash": 434998692.0
+      },
+      "extraction_notes": null
+    },
+    {
+      "ticker": 1111,
+      "company_name": "Saudi Tadawul Group Holding Co",
+      "sector": "Telecom",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "reporting_unit": "units",
+      "source_file": "Saudi_Tadawul_Group_Holding_Co_FYE_2024.xlsx",
+      "financials": {
+        "revenue": 1446558786.0,
+        "gross_profit": 911796308.0,
+        "operating_income": 911796308.0,
+        "ebit": 680719382.0,
+        "net_income": 620886006.0,
+        "total_assets": 9141225301.0,
+        "total_liabilities": 5649488136.0,
+        "cash": 352183946.0
+      },
+      "extraction_notes": null
+    },
+    {
+      "ticker": 2280,
+      "company_name": "Almarai Co",
+      "sector": "Consumer",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Almarai_Co_FYE_2024.xlsx",
+      "financials": {
+        "revenue": 20979512.0,
+        "gross_profit": 6664052.0,
+        "operating_income": 6664052.0,
+        "ebit": 2463327.0,
+        "net_income": 2313667.0,
+        "total_assets": 35567960.0,
+        "cash": 491390.0
+      },
+      "extraction_notes": null
+    },
+    {
+      "ticker": 4161,
+      "company_name": "BinDawood Holding Co",
+      "sector": "Retail",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "reporting_unit": "units",
+      "source_file": "BinDawood_Holding_Co_FYE_2024.xlsx",
+      "financials": {
+        "revenue": 5677685762.0,
+        "gross_profit": 1893784751.0,
+        "operating_income": 6293691.0,
+        "ebit": 299328172.0,
+        "net_income": 280245234.0,
+        "total_assets": 5264336226.0,
+        "total_liabilities": 3790615345.0,
+        "total_equity": 1473720881.0,
+        "cash": 429041321.0
+      },
+      "extraction_notes": null
+    },
+    {
+      "ticker": 4190,
+      "company_name": "Jarir Marketing Co",
+      "sector": "Retail",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Jarir_Marketing_Co_FYE_2024.xlsx",
+      "financials": {
+        "revenue": 10830921.0,
+        "gross_profit": 1324459.0,
+        "operating_income": 75591.0,
+        "ebit": 1004520.0,
+        "net_income": 973955.0,
+        "total_assets": 4272694.0,
+        "total_liabilities": 2527842.0,
+        "total_equity": 1744852.0,
+        "cash": 32835.0
+      },
+      "extraction_notes": null
+    },
+    {
+      "ticker": 4164,
+      "company_name": "Nahdi Medical Co",
+      "sector": "Retail",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "reporting_unit": "units",
+      "source_file": "Nahdi_Medical_Co_FYE_2024.xlsx",
+      "financials": {
+        "revenue": 9446420046.0,
+        "operating_income": 29446113.0,
+        "ebit": 834543624.0,
+        "net_income": 820723624.0,
+        "total_assets": 6173349244.0,
+        "total_liabilities": 3587246396.0,
+        "total_equity": 2586102848.0,
+        "cash": 956809579.0
+      },
+      "extraction_notes": null
+    },
+    {
+      "ticker": 4200,
+      "company_name": "Aldrees Petroleum and Transport Services Co",
+      "sector": "Services",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "reporting_unit": "units",
+      "source_file": "Aldrees_Petroleum_and_Transport_Services_Co_FYE_2024.xlsx",
+      "financials": {
+        "revenue": 19288553013.0,
+        "gross_profit": 811218990.0,
+        "operating_income": 811218990.0,
+        "ebit": 346386115.0,
+        "net_income": 338047048.0,
+        "total_assets": 8443323301.0,
+        "total_liabilities": 6963835876.0,
+        "total_equity": 1479487425.0,
+        "cash": 241982102.0
+      },
+      "extraction_notes": null
+    },
+    {
+      "ticker": 4240,
+      "company_name": "Fawaz Abdulaziz Alhokair Co",
+      "sector": "Retail",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "reporting_unit": "units",
+      "source_file": "Fawaz_Abdulaziz_Alhokair_Co_FYE_2024.xlsx",
+      "financials": {
+        "revenue": 4844508690.0,
+        "gross_profit": 631522370.0,
+        "operating_income": 279010063.0,
+        "ebit": -84531239.0,
+        "net_income": -145133628.0,
+        "total_assets": 4585690106.0,
+        "total_liabilities": 5603825678.0,
+        "cash": 256211534.0
+      },
+      "extraction_notes": null
+    },
+    {
+      "ticker": 4021,
+      "company_name": "Canadian Medical Center Co",
+      "sector": "Healthcare",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "reporting_unit": "units",
+      "source_file": "Canadian_Medical_Center_Co_FYE_2024.xlsx",
+      "financials": {
+        "revenue": 51224437.0,
+        "gross_profit": 11510465.0,
+        "operating_income": 11510465.0,
+        "ebit": 4851326.0,
+        "net_income": 3369746.0,
+        "total_assets": 117819119.0,
+        "total_liabilities": 29766154.0,
+        "total_equity": 88052965.0,
+        "cash": 45484462.0
+      },
+      "extraction_notes": null
+    },
+    {
+      "ticker": 4013,
+      "company_name": "Dr. Sulaiman Al Habib Medical Services Group",
+      "sector": "Healthcare",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Dr._Sulaiman_Al_Habib_Medical_Services_Group_FYE_2024.xlsx",
+      "financials": {
+        "revenue": 11200.43,
+        "gross_profit": 3744.24,
+        "operating_income": 3744.24,
+        "ebit": 2412.84,
+        "net_income": 2369.94,
+        "total_assets": 20557.93,
+        "total_liabilities": 12945.28,
+        "total_equity": 7612.65,
+        "cash": 2890.7
+      },
+      "extraction_notes": null
+    },
+    {
+      "ticker": 1830,
+      "company_name": "Leejam Sports Co",
+      "sector": "Services",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "reporting_unit": "units",
+      "source_file": "Leejam_Sports_Co_FYE_2024.xlsx",
+      "financials": {
+        "revenue": 1501366256.0,
+        "gross_profit": 623393041.0,
+        "operating_income": 623393041.0,
+        "ebit": 464352738.0,
+        "net_income": 454126331.0,
+        "total_assets": 3720933698.0,
+        "total_liabilities": 2482610108.0,
+        "cash": 106103887.0
+      },
+      "extraction_notes": null
+    },
+    {
+      "ticker": 6001,
+      "company_name": "Almunajem Foods Co",
+      "sector": "Consumer",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "reporting_unit": "units",
+      "source_file": "Almunajem_Foods_Co_FYE_2024.xlsx",
+      "financials": {
+        "revenue": 3346984084.0,
+        "gross_profit": 566424452.0,
+        "operating_income": 14385332.0,
+        "ebit": 290431621.0,
+        "net_income": 278652929.0,
+        "total_assets": 1936244945.0,
+        "total_liabilities": 926270129.0,
+        "total_equity": 1009974816.0,
+        "cash": 42628379.0
+      },
+      "extraction_notes": null
+    },
+    {
+      "ticker": 4220,
+      "company_name": "Emaar The Economic City",
+      "sector": "Real Estate",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Emaar_The_Economic_City_FYE_2024.xlsx",
+      "financials": {
+        "revenue": 425970.0,
+        "gross_profit": -118548.0,
+        "operating_income": 95785.0,
+        "ebit": -1058533.0,
+        "net_income": -1134565.0,
+        "total_assets": 15090660.0,
+        "total_liabilities": 9823749.0,
+        "cash": 252367.0
+      },
+      "extraction_notes": null
+    },
+    {
+      "ticker": 4072,
+      "company_name": "MBC Group Co",
+      "sector": "Media",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "MBC_Group_Co_FYE_2024.xlsx",
+      "financials": {
+        "revenue": 3536943.0,
+        "gross_profit": 1204176.0,
+        "operating_income": 1204176.0,
+        "ebit": 435973.0,
+        "net_income": 426130.0,
+        "total_assets": 8557603.0,
+        "total_liabilities": 4369745.0,
+        "cash": 1493987.0
+      },
+      "extraction_notes": null
+    }
+  ]
+}

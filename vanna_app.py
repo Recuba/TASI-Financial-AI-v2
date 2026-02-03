@@ -150,6 +150,8 @@ class TASIFinancialAgent:
         return """
 ## Example Queries
 
+### General Company Queries
+
 Question: "Show all companies"
 SQL: SELECT ticker, company_name, sector, company_type, size_category FROM company_financials WHERE is_latest = TRUE GROUP BY ticker, company_name, sector, company_type, size_category ORDER BY company_name;
 
@@ -165,9 +167,6 @@ SQL: SELECT ticker, company_name, sector, roe_percent, roe_status FROM company_f
 Question: "Largest companies by revenue"
 SQL: SELECT ticker, company_name, sector, revenue_millions, net_profit_millions FROM company_financials WHERE is_latest = TRUE AND is_annual = TRUE ORDER BY revenue_millions DESC NULLS LAST LIMIT 20;
 
-Question: "What is the total revenue by sector?"
-SQL: SELECT sector, COUNT(DISTINCT ticker) as companies, SUM(revenue_millions) as total_revenue_millions, AVG(roe_percent) as avg_roe_percent FROM company_financials WHERE is_latest = TRUE AND is_annual = TRUE GROUP BY sector ORDER BY total_revenue_millions DESC NULLS LAST;
-
 Question: "Which companies are losing money?"
 SQL: SELECT ticker, company_name, sector, net_profit_millions, net_margin_percent FROM company_financials WHERE is_latest = TRUE AND is_annual = TRUE AND profit_status = 'Loss' ORDER BY net_profit_millions ASC;
 
@@ -177,6 +176,71 @@ SQL: SELECT ticker, company_name, current_ratio, quick_ratio, liquidity_status F
 Question: "Most leveraged companies"
 SQL: SELECT ticker, company_name, sector, debt_to_equity_percent, leverage_status FROM company_financials WHERE is_latest = TRUE AND is_annual = TRUE ORDER BY debt_to_equity_percent DESC NULLS LAST LIMIT 20;
 
+### Bank-Specific Queries
+
+Question: "Show all banks with their latest Net Interest Income"
+SQL: SELECT ticker, company_name, bank_type, net_interest_income_m, nim_percent, roe_percent FROM v_banks_latest WHERE is_latest = TRUE AND is_annual = TRUE ORDER BY net_interest_income_m DESC NULLS LAST;
+
+Question: "Which banks have the highest Net Interest Margin?"
+SQL: SELECT ticker, company_name, bank_type, nim_percent, net_interest_income_m, roe_percent FROM v_banks_latest WHERE is_latest = TRUE AND is_annual = TRUE ORDER BY nim_percent DESC NULLS LAST LIMIT 10;
+
+Question: "Show Islamic banks performance"
+SQL: SELECT ticker, company_name, net_interest_income_m, total_loans_m, total_deposits_m, nim_percent, roe_percent FROM v_banks_latest WHERE bank_type = 'Islamic Bank' AND is_latest = TRUE AND is_annual = TRUE ORDER BY total_assets_m DESC NULLS LAST;
+
+Question: "Banks with the best loan to deposit ratio"
+SQL: SELECT ticker, company_name, total_loans_m, total_deposits_m, loan_to_deposit_percent, nim_percent FROM v_banks_latest WHERE is_latest = TRUE AND is_annual = TRUE ORDER BY loan_to_deposit_percent DESC NULLS LAST;
+
+Question: "Which banks have the lowest NPL ratio?"
+SQL: SELECT ticker, company_name, npl_m, total_loans_m, npl_percent, capital_adequacy_percent FROM v_banks_latest WHERE is_latest = TRUE AND is_annual = TRUE AND npl_percent IS NOT NULL ORDER BY npl_percent ASC LIMIT 10;
+
+Question: "Top banks by total assets in 2024"
+SQL: SELECT ticker, company_name, bank_type, total_assets_m, total_equity_m, roe_percent FROM v_banks_latest WHERE fiscal_year = 2024 AND is_annual = TRUE ORDER BY total_assets_m DESC NULLS LAST;
+
+Question: "Banks with highest ROE"
+SQL: SELECT ticker, company_name, bank_type, roe_percent, roa_percent, net_interest_income_m, net_profit_m FROM v_banks_latest WHERE is_latest = TRUE AND is_annual = TRUE ORDER BY roe_percent DESC NULLS LAST LIMIT 10;
+
+Question: "Compare commercial banks vs Islamic banks"
+SQL: SELECT bank_type, COUNT(*) as bank_count, ROUND(AVG(nim_percent), 2) as avg_nim, ROUND(AVG(roe_percent), 2) as avg_roe, ROUND(AVG(loan_to_deposit_percent), 2) as avg_ltd_ratio FROM v_banks_latest WHERE is_latest = TRUE AND is_annual = TRUE GROUP BY bank_type ORDER BY avg_roe DESC;
+
+### Insurance Company Queries
+
+Question: "Show all insurance companies with Gross Written Premiums"
+SQL: SELECT ticker, company_name, insurance_type, gross_written_premiums_m, net_profit_m, roe_percent FROM v_insurance_latest WHERE is_latest = TRUE AND is_annual = TRUE ORDER BY gross_written_premiums_m DESC NULLS LAST;
+
+Question: "Which insurance companies have the best combined ratio?"
+SQL: SELECT ticker, company_name, insurance_type, combined_ratio_percent, loss_ratio_percent, expense_ratio_percent FROM v_insurance_latest WHERE is_latest = TRUE AND is_annual = TRUE AND combined_ratio_percent IS NOT NULL ORDER BY combined_ratio_percent ASC LIMIT 10;
+
+Question: "Insurance companies with the highest claims"
+SQL: SELECT ticker, company_name, insurance_type, claims_incurred_m, net_earned_premiums_m, loss_ratio_percent FROM v_insurance_latest WHERE is_latest = TRUE AND is_annual = TRUE ORDER BY claims_incurred_m DESC NULLS LAST LIMIT 10;
+
+Question: "Show Takaful insurance performance"
+SQL: SELECT ticker, company_name, gross_written_premiums_m, claims_incurred_m, net_profit_m, combined_ratio_percent, roe_percent FROM v_insurance_latest WHERE insurance_type = 'Takaful (Islamic Insurance)' AND is_latest = TRUE AND is_annual = TRUE ORDER BY gross_written_premiums_m DESC NULLS LAST;
+
+Question: "Insurance companies with best ROE in 2024"
+SQL: SELECT ticker, company_name, insurance_type, roe_percent, roa_percent, gross_written_premiums_m, net_profit_m FROM v_insurance_latest WHERE fiscal_year = 2024 AND is_annual = TRUE ORDER BY roe_percent DESC NULLS LAST;
+
+Question: "Compare insurance types by profitability"
+SQL: SELECT insurance_type, COUNT(*) as company_count, ROUND(AVG(combined_ratio_percent), 2) as avg_combined_ratio, ROUND(AVG(roe_percent), 2) as avg_roe, ROUND(AVG(loss_ratio_percent), 2) as avg_loss_ratio FROM v_insurance_latest WHERE is_latest = TRUE AND is_annual = TRUE GROUP BY insurance_type ORDER BY avg_roe DESC NULLS LAST;
+
+### 2024-Specific Queries
+
+Question: "All companies with 2024 annual data"
+SQL: SELECT ticker, company_name, company_type, sector, primary_income_m, net_profit_m, roe_percent FROM v_all_companies_2024 WHERE is_annual = TRUE ORDER BY primary_income_m DESC NULLS LAST;
+
+Question: "Top 20 companies by revenue equivalent in 2024"
+SQL: SELECT ticker, company_name, company_type, income_metric_name, primary_income_m, net_profit_m, roe_percent FROM v_all_companies_2024 WHERE is_annual = TRUE ORDER BY primary_income_m DESC NULLS LAST LIMIT 20;
+
+Question: "Compare 2024 performance across institution types"
+SQL: SELECT company_type, COUNT(*) as company_count, ROUND(AVG(primary_income_m), 2) as avg_income_m, ROUND(AVG(net_profit_m), 2) as avg_profit_m, ROUND(AVG(roe_percent), 2) as avg_roe FROM v_all_companies_2024 WHERE is_annual = TRUE GROUP BY company_type ORDER BY avg_roe DESC NULLS LAST;
+
+Question: "2024 banks vs insurance companies performance"
+SQL: SELECT company_type, COUNT(*) as companies, ROUND(SUM(primary_income_m), 2) as total_income, ROUND(SUM(net_profit_m), 2) as total_profit, ROUND(AVG(roe_percent), 2) as avg_roe FROM v_all_companies_2024 WHERE company_type IN ('Commercial Bank', 'Insurance Company') AND is_annual = TRUE GROUP BY company_type;
+
+### Sector Analysis Queries
+
+Question: "What is the total revenue by sector?"
+SQL: SELECT sector, COUNT(DISTINCT ticker) as companies, SUM(revenue_millions) as total_revenue_millions, AVG(roe_percent) as avg_roe_percent FROM company_financials WHERE is_latest = TRUE AND is_annual = TRUE GROUP BY sector ORDER BY total_revenue_millions DESC NULLS LAST;
+
 Question: "Insurance sector performance"
 SQL: SELECT ticker, company_name, revenue_millions, net_profit_millions, roe_percent, net_margin_percent, profit_status FROM company_financials WHERE sector = 'Insurance' AND is_latest = TRUE AND is_annual = TRUE ORDER BY revenue_millions DESC NULLS LAST;
 
@@ -185,6 +249,14 @@ SQL: SELECT sector, COUNT(DISTINCT ticker) as company_count, AVG(roe_percent) as
 
 Question: "Year over year summary"
 SQL: SELECT fiscal_year, COUNT(DISTINCT ticker) as companies_reporting, ROUND(SUM(revenue_millions)::numeric, 2) as total_revenue_m, ROUND(SUM(net_profit_millions)::numeric, 2) as total_profit_m, ROUND(AVG(roe_percent)::numeric, 2) as avg_roe_pct FROM company_financials WHERE is_annual = TRUE GROUP BY fiscal_year ORDER BY fiscal_year;
+
+### Industrial/Standard Company Queries
+
+Question: "Show industrial companies with highest gross margin"
+SQL: SELECT ticker, company_name, sector, gross_margin_percent, operating_margin_percent, net_margin_percent, roe_percent FROM v_industrial_latest WHERE is_latest = TRUE AND is_annual = TRUE AND gross_margin_percent IS NOT NULL ORDER BY gross_margin_percent DESC LIMIT 20;
+
+Question: "Industrial companies with best operating efficiency"
+SQL: SELECT ticker, company_name, sector, revenue_m, operating_profit_m, operating_margin_percent, roe_percent FROM v_industrial_latest WHERE is_latest = TRUE AND is_annual = TRUE ORDER BY operating_margin_percent DESC NULLS LAST LIMIT 10;
 """
 
     def _build_system_prompt(self) -> str:
@@ -193,30 +265,55 @@ SQL: SELECT fiscal_year, COUNT(DISTINCT ticker) as companies_reporting, ROUND(SU
 Your task is to convert natural language questions into PostgreSQL queries.
 
 ## Database Schema
-The main view for querying is `company_financials` which contains:
 {self.schema}
+
+## Available Views
+1. **company_financials** (Main view): All companies with unified metrics
+2. **v_banks_latest**: Bank-specific view with Net Interest Income, NIM, loan/deposit ratios
+3. **v_insurance_latest**: Insurance-specific view with GWP, claims, combined ratio
+4. **v_industrial_latest**: Standard companies with revenue, gross profit, operating profit
+5. **v_all_companies_2024**: All companies with 2024 data using appropriate revenue metrics
 
 ## Key Information
 - All monetary values are in MILLIONS of Saudi Riyals (SAR)
 - All ratios (roe_percent, net_margin_percent, etc.) are expressed as percentages (e.g., 15 means 15%)
 - Use `is_latest = TRUE` to get the most recent data for each company
 - Use `is_annual = TRUE` to filter for annual (full-year) data only
-- Common status values:
-  - profit_status: 'Profit', 'Loss', 'N/A'
-  - liquidity_status: 'Strong', 'Moderate', 'Weak', 'Critical'
-  - leverage_status: 'Low', 'Moderate', 'High', 'Critical'
-  - roe_status: 'Excellent', 'Good', 'Average', 'Weak', 'Negative', 'N/A'
+
+## Company Types & Their Metrics
+- **BANKS**: Use Net Interest Income (not revenue), NIM, loan/deposit ratios, NPL ratio
+  - Views: v_banks_latest or company_financials (filter by institution_type = 'Commercial Bank')
+  - Key columns: net_interest_income_millions, nim_percent, loan_to_deposit_percent, npl_percent
+
+- **INSURANCE**: Use Gross Written Premiums (not revenue), loss ratio, combined ratio
+  - Views: v_insurance_latest or company_financials (filter by institution_type = 'Insurance Company')
+  - Key columns: gross_written_premiums_millions, loss_ratio_percent, combined_ratio_percent
+
+- **STANDARD/INDUSTRIAL**: Use revenue, gross profit, operating profit
+  - Views: v_industrial_latest or company_financials
+  - Key columns: revenue_millions, gross_margin_percent, operating_margin_percent
+
+## Status Classifications
+- profit_status: 'Profit', 'Loss', 'N/A'
+- liquidity_status: 'Strong', 'Moderate', 'Weak', 'Critical'
+- leverage_status: 'Low', 'Moderate', 'High', 'Critical'
+- roe_status: 'Excellent', 'Good', 'Average', 'Weak', 'Negative', 'N/A'
 
 {self.training_examples}
 
 ## Instructions
 1. Generate ONLY the SQL query, no explanations
-2. Always use the `company_financials` view unless specifically asked for raw data
+2. Choose the appropriate view based on the question:
+   - For bank-specific queries (NII, NIM, loans, deposits): use v_banks_latest
+   - For insurance-specific queries (GWP, claims, combined ratio): use v_insurance_latest
+   - For industrial/standard companies: use v_industrial_latest
+   - For mixed queries or general comparisons: use company_financials or v_all_companies_2024
 3. Use proper PostgreSQL syntax
 4. Handle NULL values with NULLS LAST in ORDER BY
 5. Limit results to reasonable numbers (20-50) unless asked for all
 6. For "latest" or "current" data, use `is_latest = TRUE`
 7. For annual comparisons, use `is_annual = TRUE`
+8. For 2024-specific queries, use v_all_companies_2024 or filter by fiscal_year = 2024
 """
 
     def generate_sql(self, question: str) -> str:

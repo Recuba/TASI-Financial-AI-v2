@@ -1,0 +1,499 @@
+{
+  "extraction_date": "2026-02-03",
+  "extraction_type": "insurance",
+  "companies": [
+    {
+      "ticker": 8010,
+      "company_name": "The Company for Cooperative Insurance",
+      "fiscal_year": 2022,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "The_Company_for_Cooperative_Insurance_FYE_2022.xlsx",
+      "financials": {
+        "total_assets": 18914997.0,
+        "total_equity": 3350970.0,
+        "total_liabilities": 15240315.0,
+        "net_income": 391003.0,
+        "gross_written_premiums": 14349620.0,
+        "net_earned_premiums": 10555662.0,
+        "net_claims_incurred": 8454818.0,
+        "policy_acquisition_costs": 511520.0,
+        "investment_income": 304481.0,
+        "technical_reserves": 5240555.0
+      },
+      "extraction_notes": "Latest available data is FYE 2022"
+    },
+    {
+      "ticker": 8012,
+      "company_name": "Aljazira Takaful Taawuni Co",
+      "fiscal_year": 2022,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Aljazira_Takaful_Taawuni_Co_FYE_2022.xlsx",
+      "financials": {
+        "total_assets": 2675397.0,
+        "total_equity": null,
+        "total_liabilities": 1741223.0,
+        "net_income": 28354.0,
+        "gross_written_premiums": 415621.0,
+        "net_earned_premiums": 275492.0,
+        "net_claims_incurred": 210151.0,
+        "policy_acquisition_costs": 11008.0,
+        "investment_income": 185.0,
+        "technical_reserves": 119324.0
+      },
+      "extraction_notes": "Latest available data is FYE 2022"
+    },
+    {
+      "ticker": 8020,
+      "company_name": "Malath Cooperative Insurance Co",
+      "fiscal_year": 2022,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Malath_Cooperative_Insurance_Co_FYE_2022.xlsx",
+      "financials": {
+        "total_assets": 1378658.0,
+        "total_equity": 336450.0,
+        "total_liabilities": 1005163.0,
+        "net_income": -28315.0,
+        "gross_written_premiums": 944376.0,
+        "net_earned_premiums": 870072.0,
+        "net_claims_incurred": 745494.0,
+        "policy_acquisition_costs": 71538.0,
+        "investment_income": 12569.0,
+        "technical_reserves": 318805.0
+      },
+      "extraction_notes": "Latest available data is FYE 2022"
+    },
+    {
+      "ticker": 8030,
+      "company_name": "The Mediterranean and Gulf Insurance and Reinsurance Co",
+      "fiscal_year": 2022,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "The_Mediterranean_and_Gulf_Insurance_and_Reinsurance_Co_FYE_2022.xlsx",
+      "financials": {
+        "total_assets": 4031990.0,
+        "total_equity": 645060.0,
+        "total_liabilities": 3346770.0,
+        "net_income": -315206.0,
+        "gross_written_premiums": 2854602.0,
+        "net_earned_premiums": 2124772.0,
+        "net_claims_incurred": 2161413.0,
+        "policy_acquisition_costs": 180178.0,
+        "investment_income": 25755.0,
+        "technical_reserves": 1419114.0
+      },
+      "extraction_notes": "Latest available data is FYE 2022"
+    },
+    {
+      "ticker": 8040,
+      "company_name": "Allianz Saudi Fransi Cooperative Insurance Co",
+      "fiscal_year": 2020,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Allianz_Saudi_Fransi_Cooperative_Insurance_Co_FYE_2020.xlsx",
+      "financials": {
+        "total_assets": 2631899394.0,
+        "total_equity": null,
+        "total_liabilities": 1898541674.0,
+        "net_income": -27347633.0,
+        "gross_written_premiums": 674731117.0,
+        "net_earned_premiums": 518024016.0,
+        "net_claims_incurred": 281273696.0,
+        "policy_acquisition_costs": 55071599.0,
+        "investment_income": 3958402.0,
+        "technical_reserves": 698032586.0
+      },
+      "extraction_notes": "Latest available data is FYE 2020"
+    },
+    {
+      "ticker": 8050,
+      "company_name": "Salama Cooperative Insurance Co",
+      "fiscal_year": 2022,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Salama_Cooperative_Insurance_Co_FYE_2022.xlsx",
+      "financials": {
+        "total_assets": 803416.0,
+        "total_equity": 37768.0,
+        "total_liabilities": 692660.0,
+        "net_income": -58327.0,
+        "gross_written_premiums": 792108.0,
+        "net_earned_premiums": 521065.0,
+        "net_claims_incurred": 441732.0,
+        "policy_acquisition_costs": 30714.0,
+        "investment_income": 327.0,
+        "technical_reserves": 148345.0
+      },
+      "extraction_notes": "Latest available data is FYE 2022"
+    },
+    {
+      "ticker": 8060,
+      "company_name": "Walaa Cooperative Insurance Co",
+      "fiscal_year": 2021,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Walaa_Cooperative_Insurance_Co_FYE_2021.xlsx",
+      "financials": {
+        "total_assets": 3447181.0,
+        "total_equity": null,
+        "total_liabilities": 2592302.0,
+        "net_income": -122054.0,
+        "gross_written_premiums": 2338834.0,
+        "net_earned_premiums": 1041530.0,
+        "net_claims_incurred": 969155.0,
+        "policy_acquisition_costs": 60119.0,
+        "investment_income": 21713.0,
+        "technical_reserves": 746818.0
+      },
+      "extraction_notes": "Latest available data is FYE 2021"
+    },
+    {
+      "ticker": 8070,
+      "company_name": "Arabian Shield Cooperative Insurance Co",
+      "fiscal_year": 2021,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Arabian_Shield_Cooperative_Insurance_Co_FYE_2021.xlsx",
+      "financials": {
+        "total_assets": 1148622.0,
+        "total_equity": null,
+        "total_liabilities": 613547.0,
+        "net_income": 26153.0,
+        "gross_written_premiums": 558166.0,
+        "net_earned_premiums": 361194.0,
+        "net_claims_incurred": 283973.0,
+        "policy_acquisition_costs": 15295.0,
+        "investment_income": 15035.0,
+        "technical_reserves": 247873.0
+      },
+      "extraction_notes": "Latest available data is FYE 2021"
+    },
+    {
+      "ticker": 8100,
+      "company_name": "Saudi Arabian Cooperative Insurance Co",
+      "fiscal_year": 2021,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Saudi_Arabian_Cooperative_Insurance_Co_FYE_2021.xlsx",
+      "financials": {
+        "total_assets": 1355443724.0,
+        "total_equity": 292735569.0,
+        "total_liabilities": 1050374709.0,
+        "net_income": -62634679.0,
+        "gross_written_premiums": 777537673.0,
+        "net_earned_premiums": 567044273.0,
+        "net_claims_incurred": 463480912.0,
+        "policy_acquisition_costs": 61085624.0,
+        "investment_income": 2891455.0,
+        "technical_reserves": 593123766.0
+      },
+      "extraction_notes": "Latest available data is FYE 2021"
+    },
+    {
+      "ticker": 8120,
+      "company_name": "Gulf Union Cooperative Insurance Co",
+      "fiscal_year": null,
+      "period_type": "annual",
+      "reporting_unit": null,
+      "source_file": null,
+      "financials": null,
+      "extraction_notes": "No FYE file available"
+    },
+    {
+      "ticker": 8150,
+      "company_name": "Allied Cooperative Insurance Group",
+      "fiscal_year": 2022,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Allied_Cooperative_Insurance_Group_FYE_2022.xlsx",
+      "financials": {
+        "total_assets": 904738.0,
+        "total_equity": null,
+        "total_liabilities": 728031.0,
+        "net_income": -13300.0,
+        "gross_written_premiums": 830694.0,
+        "net_earned_premiums": 579089.0,
+        "net_claims_incurred": 452943.0,
+        "policy_acquisition_costs": 90388.0,
+        "investment_income": 8610.0,
+        "technical_reserves": 159441.0
+      },
+      "extraction_notes": "Latest available data is FYE 2022"
+    },
+    {
+      "ticker": 8160,
+      "company_name": "Arabia Insurance Cooperative Co",
+      "fiscal_year": 2017,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Arabia_Insurance_Cooperative_Co_FYE_2017.xlsx",
+      "financials": {
+        "total_assets": 734990263.0,
+        "total_equity": null,
+        "total_liabilities": 395072891.0,
+        "net_income": 15821592.0,
+        "gross_written_premiums": 314390961.0,
+        "net_earned_premiums": 250534553.0,
+        "net_claims_incurred": 133517762.0,
+        "policy_acquisition_costs": 27188317.0,
+        "investment_income": 4790576.0,
+        "technical_reserves": 143354441.0
+      },
+      "extraction_notes": "Latest available data is FYE 2017"
+    },
+    {
+      "ticker": 8170,
+      "company_name": "Al-Etihad Cooperative Insurance Co",
+      "fiscal_year": 2022,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Al-Etihad_Cooperative_Insurance_Co_FYE_2022.xlsx",
+      "financials": {
+        "total_assets": 1835227296.0,
+        "total_equity": 565258467.0,
+        "total_liabilities": 1239906657.0,
+        "net_income": 32290996.0,
+        "gross_written_premiums": 1176700533.0,
+        "net_earned_premiums": 1003208461.0,
+        "net_claims_incurred": 789040849.0,
+        "policy_acquisition_costs": 74185324.0,
+        "investment_income": 18394623.0,
+        "technical_reserves": 87337653.0
+      },
+      "extraction_notes": "Latest available data is FYE 2022"
+    },
+    {
+      "ticker": 8180,
+      "company_name": "Al Sagr Cooperative Insurance Co",
+      "fiscal_year": 2022,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Al_Sagr_Cooperative_Insurance_Co_FYE_2022.xlsx",
+      "financials": {
+        "total_assets": 737819806.0,
+        "total_equity": null,
+        "total_liabilities": 463811570.0,
+        "net_income": -73496262.0,
+        "gross_written_premiums": 475264474.0,
+        "net_earned_premiums": 409426749.0,
+        "net_claims_incurred": 400835274.0,
+        "policy_acquisition_costs": 28071527.0,
+        "investment_income": 8658945.0,
+        "technical_reserves": 102866018.0
+      },
+      "extraction_notes": "Latest available data is FYE 2022"
+    },
+    {
+      "ticker": 8190,
+      "company_name": "United Cooperative Assurance Co",
+      "fiscal_year": 2022,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "United_Cooperative_Assurance_Co_FYE_2022.xlsx",
+      "financials": {
+        "total_assets": 1060892.0,
+        "total_equity": 205633.0,
+        "total_liabilities": 846646.0,
+        "net_income": -42861.0,
+        "gross_written_premiums": 821844.0,
+        "net_earned_premiums": 260903.0,
+        "net_claims_incurred": 247481.0,
+        "policy_acquisition_costs": 37052.0,
+        "investment_income": 3623.0,
+        "technical_reserves": 142321.0
+      },
+      "extraction_notes": "Latest available data is FYE 2022"
+    },
+    {
+      "ticker": 8200,
+      "company_name": "Saudi Re for Cooperative Reinsurance Co",
+      "fiscal_year": 2020,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Saudi_Re_for_Cooperative_Reinsurance_Co_FYE_2020.xlsx",
+      "financials": {
+        "total_assets": 2847959687.0,
+        "total_equity": 923179584.0,
+        "total_liabilities": 1782877342.0,
+        "net_income": 45917924.0,
+        "gross_written_premiums": 935114217.0,
+        "net_earned_premiums": 647120580.0,
+        "net_claims_incurred": 391979812.0,
+        "policy_acquisition_costs": 194682388.0,
+        "investment_income": 5784358.0,
+        "technical_reserves": 1067688647.0
+      },
+      "extraction_notes": "Latest available data is FYE 2020"
+    },
+    {
+      "ticker": 8230,
+      "company_name": "Al-Rajhi Company for Cooperative Insurance",
+      "fiscal_year": 2020,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Al-Rajhi_Company_for_Cooperative_Insurance_FYE_2020.xlsx",
+      "financials": {
+        "total_assets": null,
+        "total_equity": null,
+        "total_liabilities": null,
+        "net_income": null,
+        "gross_written_premiums": null,
+        "net_earned_premiums": null,
+        "net_claims_incurred": null,
+        "policy_acquisition_costs": null,
+        "investment_income": null,
+        "technical_reserves": null
+      },
+      "extraction_notes": "File contains only metadata and audit report, no financial statement data available"
+    },
+    {
+      "ticker": 8240,
+      "company_name": "CHUBB Arabia Cooperative Insurance Co",
+      "fiscal_year": 2022,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "CHUBB_Arabia_Cooperative_Insurance_Co_FYE_2022.xlsx",
+      "financials": {
+        "total_assets": 924160.0,
+        "total_equity": null,
+        "total_liabilities": 537586.0,
+        "net_income": 4697.0,
+        "gross_written_premiums": 303677.0,
+        "net_earned_premiums": 98100.0,
+        "net_claims_incurred": 49238.0,
+        "policy_acquisition_costs": 19797.0,
+        "investment_income": 5366.0,
+        "technical_reserves": 202965.0
+      },
+      "extraction_notes": "Latest available data is FYE 2022"
+    },
+    {
+      "ticker": 8250,
+      "company_name": "AXA Cooperative Insurance Co",
+      "fiscal_year": 2021,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "AXA_Cooperative_Insurance_Co_FYE_2021.xlsx",
+      "financials": {
+        "total_assets": 2991069.0,
+        "total_equity": 996019.0,
+        "total_liabilities": 1928714.0,
+        "net_income": 138523.0,
+        "gross_written_premiums": 1454470.0,
+        "net_earned_premiums": 1281699.0,
+        "net_claims_incurred": 885419.0,
+        "policy_acquisition_costs": 129191.0,
+        "investment_income": 44057.0,
+        "technical_reserves": 1020856.0
+      },
+      "extraction_notes": "Latest available data is FYE 2021"
+    },
+    {
+      "ticker": 8260,
+      "company_name": "Gulf General Cooperative Insurance Co",
+      "fiscal_year": 2022,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Gulf_General_Cooperative_Insurance_Co_FYE_2022.xlsx",
+      "financials": {
+        "total_assets": 590709.0,
+        "total_equity": 267616.0,
+        "total_liabilities": 312892.0,
+        "net_income": -104190.0,
+        "gross_written_premiums": 373293.0,
+        "net_earned_premiums": 245010.0,
+        "net_claims_incurred": 252706.0,
+        "policy_acquisition_costs": 40630.0,
+        "investment_income": -4965.0,
+        "technical_reserves": 79054.0
+      },
+      "extraction_notes": "Latest available data is FYE 2022"
+    },
+    {
+      "ticker": 8280,
+      "company_name": "Al Alamiya for Cooperative Insurance Co",
+      "fiscal_year": 2021,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Al_Alamiya_for_Cooperative_Insurance_Co_FYE_2021.xlsx",
+      "financials": {
+        "total_assets": 882319.0,
+        "total_equity": 366831.0,
+        "total_liabilities": 424564.0,
+        "net_income": -35377.0,
+        "gross_written_premiums": 263637.0,
+        "net_earned_premiums": 93677.0,
+        "net_claims_incurred": 62835.0,
+        "policy_acquisition_costs": 10217.0,
+        "investment_income": 1096.0,
+        "technical_reserves": 153470.0
+      },
+      "extraction_notes": "Latest available data is FYE 2021"
+    },
+    {
+      "ticker": 8300,
+      "company_name": "Wataniya Insurance Co",
+      "fiscal_year": 2022,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Wataniya_Insurance_Co_FYE_2022.xlsx",
+      "financials": {
+        "total_assets": 1922045.0,
+        "total_equity": null,
+        "total_liabilities": 1526263.0,
+        "net_income": -18344.0,
+        "gross_written_premiums": 1042418.0,
+        "net_earned_premiums": 505508.0,
+        "net_claims_incurred": 347316.0,
+        "policy_acquisition_costs": 74014.0,
+        "investment_income": 411.0,
+        "technical_reserves": 517671.0
+      },
+      "extraction_notes": "Latest available data is FYE 2022"
+    },
+    {
+      "ticker": 8310,
+      "company_name": "Amana Cooperative Insurance Co",
+      "fiscal_year": 2022,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Amana_Cooperative_Insurance_Co_FYE_2022.xlsx",
+      "financials": {
+        "total_assets": 520231.0,
+        "total_equity": null,
+        "total_liabilities": 236698.0,
+        "net_income": -47245.0,
+        "gross_written_premiums": 230515.0,
+        "net_earned_premiums": 220711.0,
+        "net_claims_incurred": 198196.0,
+        "policy_acquisition_costs": 29885.0,
+        "investment_income": 2928.0,
+        "technical_reserves": 70567.0
+      },
+      "extraction_notes": "Latest available data is FYE 2022"
+    },
+    {
+      "ticker": 8311,
+      "company_name": "Saudi Enaya Cooperative Insurance Co",
+      "fiscal_year": 2022,
+      "period_type": "annual",
+      "reporting_unit": "thousands",
+      "source_file": "Saudi_Enaya_Cooperative_Insurance_Co_FYE_2022.xlsx",
+      "financials": {
+        "total_assets": 553753.0,
+        "total_equity": null,
+        "total_liabilities": 239702.0,
+        "net_income": -9581.0,
+        "gross_written_premiums": 227474.0,
+        "net_earned_premiums": 227647.0,
+        "net_claims_incurred": 181091.0,
+        "policy_acquisition_costs": 13859.0,
+        "investment_income": 5195.0,
+        "technical_reserves": 81830.0
+      },
+      "extraction_notes": "Latest available data is FYE 2022"
+    }
+  ]
+}

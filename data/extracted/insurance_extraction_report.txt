@@ -1,0 +1,155 @@
+================================================================================
+INSURANCE COMPANIES FINANCIAL DATA EXTRACTION REPORT
+================================================================================
+Date: 2026-02-03
+Database: TASI Saudi Insurance Sector
+Total Companies: 24
+Extraction Tool: Python pandas with /xlsx skill
+
+================================================================================
+EXTRACTION SUMMARY
+================================================================================
+
+Successfully Extracted: 22 out of 24 companies (91.7%)
+Failed Extractions:     2 companies
+
+BREAKDOWN BY FISCAL YEAR:
+  FYE 2022: 14 companies (58%)
+  FYE 2021:  5 companies (21%)
+  FYE 2020:  2 companies (8%)
+  FYE 2017:  1 company  (4%)
+  No Data:   2 companies (8%)
+
+IMPORTANT NOTE:
+The request was for FYE 2024 data, but NO insurance companies have 2024 or
+even 2023 annual data available in the Excel files. The latest available data
+for most companies is FYE 2022.
+
+================================================================================
+FAILED EXTRACTIONS - DETAILS
+================================================================================
+
+1. Gulf Union Cooperative Insurance Co (Ticker 8120)
+   Status: No FYE file available in directory
+   Reason: No annual financial statements found
+
+2. Al-Rajhi Company for Cooperative Insurance (Ticker 8230)
+   Status: File exists (FYE_2020) but incomplete
+   Reason: File contains only metadata and audit report, no financial data
+
+================================================================================
+FINANCIAL METRICS EXTRACTED
+================================================================================
+
+For each company, the following metrics were extracted (where available):
+
+1.  Total Assets
+2.  Total Equity / Shareholders' Equity
+3.  Total Liabilities (Insurance Operations)
+4.  Net Income / Net Profit (after zakat)
+5.  Gross Written Premiums
+6.  Net Earned Premiums
+7.  Net Claims Incurred
+8.  Policy Acquisition Costs
+9.  Investment Income
+10. Technical Reserves / Outstanding Claims (including IBNR)
+
+Reporting Unit: Thousands SAR for all companies (unless specified otherwise)
+
+================================================================================
+TOP 5 COMPANIES BY TOTAL ASSETS (as of latest available FYE)
+================================================================================
+
+1. Saudi Re for Cooperative Reinsurance Co (8200)
+   FYE 2020 | Total Assets: 2,847,959,687 thousand SAR
+
+2. Allianz Saudi Fransi Cooperative Insurance Co (8040)
+   FYE 2020 | Total Assets: 2,631,899,394 thousand SAR
+
+3. Al-Etihad Cooperative Insurance Co (8170)
+   FYE 2022 | Total Assets: 1,835,227,296 thousand SAR
+
+4. Saudi Arabian Cooperative Insurance Co (8100)
+   FYE 2021 | Total Assets: 1,355,443,724 thousand SAR
+
+5. Al Sagr Cooperative Insurance Co (8180)
+   FYE 2022 | Total Assets: 737,819,806 thousand SAR
+
+================================================================================
+COMPLETE COMPANY LIST
+================================================================================
+
+ TICK | COMPANY NAME                                            | FYE  | STATUS
+------+---------------------------------------------------------+------+---------
+ 8010 | The Company for Cooperative Insurance (Tawuniya)       | 2022 | OK
+ 8012 | Aljazira Takaful Taawuni Co                            | 2022 | OK
+ 8020 | Malath Cooperative Insurance Co                        | 2022 | OK
+ 8030 | The Mediterranean and Gulf Insurance & Reinsurance Co  | 2022 | OK
+ 8040 | Allianz Saudi Fransi Cooperative Insurance Co          | 2020 | OK
+ 8050 | Salama Cooperative Insurance Co                        | 2022 | OK
+ 8060 | Walaa Cooperative Insurance Co                         | 2021 | OK
+ 8070 | Arabian Shield Cooperative Insurance Co                | 2021 | OK
+ 8100 | Saudi Arabian Cooperative Insurance Co                 | 2021 | OK
+ 8120 | Gulf Union Cooperative Insurance Co                    | N/A  | NO FILE
+ 8150 | Allied Cooperative Insurance Group                     | 2022 | OK
+ 8160 | Arabia Insurance Cooperative Co                        | 2017 | OK
+ 8170 | Al-Etihad Cooperative Insurance Co                     | 2022 | OK
+ 8180 | Al Sagr Cooperative Insurance Co                       | 2022 | OK
+ 8190 | United Cooperative Assurance Co                        | 2022 | OK
+ 8200 | Saudi Re for Cooperative Reinsurance Co                | 2020 | OK
+ 8230 | Al-Rajhi Company for Cooperative Insurance             | 2020 | INCOMPLETE
+ 8240 | CHUBB Arabia Cooperative Insurance Co                  | 2022 | OK
+ 8250 | AXA Cooperative Insurance Co                           | 2021 | OK
+ 8260 | Gulf General Cooperative Insurance Co                  | 2022 | OK
+ 8280 | Al Alamiya for Cooperative Insurance Co                | 2021 | OK
+ 8300 | Wataniya Insurance Co                                  | 2022 | OK
+ 8310 | Amana Cooperative Insurance Co                         | 2022 | OK
+ 8311 | Saudi Enaya Cooperative Insurance Co                   | 2022 | OK
+
+================================================================================
+OUTPUT FILES
+================================================================================
+
+1. JSON Data File:
+   Location: C:\Users\User\venna-ai\data\extracted\insurance_2024.json
+   Format: Structured JSON with financial metrics for each company
+   Size: 24 company records
+
+2. Extraction Report:
+   Location: C:\Users\User\venna-ai\data\extracted\insurance_extraction_report.txt
+   Format: Plain text summary (this file)
+
+================================================================================
+DATA QUALITY NOTES
+================================================================================
+
+1. Some companies have null values for "total_equity" - this may indicate they
+   use different XBRL taxonomy or report equity differently
+
+2. Some values appear very large (in billions) because they're already in
+   absolute SAR rather than thousands - check reporting_unit field
+
+3. Negative net_income values indicate losses for that fiscal year
+
+4. Investment income includes both insurance operations investment gains and
+   shareholder operations commission/profit on deposits where available
+
+================================================================================
+USAGE RECOMMENDATIONS
+================================================================================
+
+1. This data is for RESEARCH ONLY - verify critical figures before use
+
+2. When comparing companies, ensure you're using the same fiscal year
+
+3. Note that this is NOT 2024 data - it's the latest available (mostly 2022)
+
+4. Before inserting into database, consider normalizing all values to the
+   same reporting unit (either SAR or thousands SAR)
+
+5. For companies with missing data, consider manually reviewing the Excel
+   files or seeking alternative data sources
+
+================================================================================
+END OF REPORT
+================================================================================

@@ -1,0 +1,1219 @@
+{
+  "consolidation_metadata": {
+    "generated_date": "2026-02-03",
+    "source_files": [
+      "banks_2024.json",
+      "insurance_2024.json",
+      "industrial_2024.json",
+      "other_sectors_2024.json"
+    ],
+    "total_companies_processed": 63,
+    "valid_records": 33,
+    "needs_review_records": 21,
+    "rejected_records": 9,
+    "target_fiscal_year": 2024
+  },
+  "summary_statistics": {
+    "banks": {
+      "total": 6,
+      "valid": 6,
+      "needs_review": 0,
+      "rejected": 0,
+      "all_fy2024": true
+    },
+    "insurance": {
+      "total": 24,
+      "valid": 0,
+      "needs_review": 16,
+      "rejected": 8,
+      "all_fy2024": false,
+      "note": "ALL insurance data is stale (FY2017-2022)"
+    },
+    "industrial": {
+      "total": 16,
+      "valid": 13,
+      "needs_review": 3,
+      "rejected": 0,
+      "all_fy2024": true
+    },
+    "other_sectors": {
+      "total": 17,
+      "valid": 14,
+      "needs_review": 2,
+      "rejected": 1,
+      "all_fy2024": true
+    }
+  },
+  "records": [
+    {
+      "ticker": 1010,
+      "company_name": "Riyad Bank",
+      "sector": "Banks",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Riyad_Bank_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "net_loans": 320089491000,
+        "total_assets": 450378794000,
+        "total_deposits": 306423391000,
+        "total_liabilities": 382436695000,
+        "total_equity": 67942099000,
+        "net_interest_income": 12873267000,
+        "fee_income": 2990940000,
+        "operating_income": 17284531000,
+        "provisions_credit_losses": 1620728000,
+        "net_income": 9321894000
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 1020,
+      "company_name": "Bank Aljazira",
+      "sector": "Banks",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Bank_Aljazira_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 85,
+      "confidence_notes": "Missing fee_income (-15)",
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "net_loans": 96912496000,
+        "total_assets": 148906068000,
+        "total_deposits": 108186514000,
+        "total_liabilities": 131704371000,
+        "total_equity": 17201697000,
+        "net_interest_income": 2634422000,
+        "fee_income": null,
+        "operating_income": 3779397000,
+        "provisions_credit_losses": 317460000,
+        "net_income": 1230954000
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 1030,
+      "company_name": "Saudi Investment Bank",
+      "sector": "Banks",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Saudi_Investment_Bank_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "net_loans": 99466490000,
+        "total_assets": 156666688000,
+        "total_deposits": 94013131000,
+        "total_liabilities": 135938074000,
+        "total_equity": 20728614000,
+        "net_interest_income": 3536692000,
+        "fee_income": 757594000,
+        "operating_income": 4178048000,
+        "provisions_credit_losses": null,
+        "net_income": 1956630000
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 1060,
+      "company_name": "Saudi Awwal Bank",
+      "sector": "Banks",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Saudi_Awwal_Bank_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "net_loans": 259345516000,
+        "total_assets": 399442809000,
+        "total_deposits": 267010659000,
+        "total_liabilities": 331156626000,
+        "total_equity": 68286183000,
+        "net_interest_income": 11023500000,
+        "fee_income": 1449562000,
+        "operating_income": 14017672000,
+        "provisions_credit_losses": 566063000,
+        "net_income": 8070461000
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 1140,
+      "company_name": "Bank Albilad",
+      "sector": "Banks",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Bank_Albilad_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "net_loans": 109304086000,
+        "total_assets": 154964687000,
+        "total_deposits": 121776215000,
+        "total_liabilities": 138271457000,
+        "total_equity": 16693230000,
+        "net_interest_income": 4433603000,
+        "fee_income": 700515000,
+        "operating_income": 5671879000,
+        "provisions_credit_losses": 129688000,
+        "net_income": 2806531000
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 1150,
+      "company_name": "Alinma Bank",
+      "sector": "Banks",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Alinma_Bank_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 85,
+      "confidence_notes": "Missing fee_income (-15)",
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "net_loans": 202308094000,
+        "total_assets": 276827481000,
+        "total_deposits": 210544650000,
+        "total_liabilities": 235385706000,
+        "total_equity": 41441775000,
+        "net_interest_income": 8648629000,
+        "fee_income": null,
+        "operating_income": 10940076000,
+        "provisions_credit_losses": 1049809000,
+        "net_income": 5831661000
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 1212,
+      "company_name": "Astra Industrial Group",
+      "sector": "Industrial",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Astra_Industrial_Group_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 3062261277,
+        "cost_of_revenue": null,
+        "gross_profit": null,
+        "operating_income": 625911925,
+        "net_income": 552875387,
+        "total_assets": 4328062188,
+        "total_liabilities": 1797093481,
+        "total_equity": 2530968707,
+        "current_assets": 2781084489,
+        "current_liabilities": 1559125183,
+        "inventories": 686150033,
+        "cash": 178046106,
+        "long_term_debt": null
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 1301,
+      "company_name": "United Wire Factories Co",
+      "sector": "Industrial",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "United_Wire_Factories_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 707286079,
+        "cost_of_revenue": 649369711,
+        "gross_profit": null,
+        "operating_income": 22505854,
+        "net_income": 16232927,
+        "total_assets": 440325677,
+        "total_liabilities": 72776397,
+        "total_equity": 367549280,
+        "current_assets": 288506719,
+        "current_liabilities": 62399808,
+        "inventories": 141460190,
+        "cash": 44424344,
+        "long_term_debt": null
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 1302,
+      "company_name": "Bawan Co",
+      "sector": "Industrial",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Bawan_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 3020204000,
+        "cost_of_revenue": 2651233000,
+        "gross_profit": null,
+        "operating_income": 127437000,
+        "net_income": 111806000,
+        "total_assets": 2597898000,
+        "total_liabilities": 1636428000,
+        "total_equity": 961470000,
+        "current_assets": 1861331000,
+        "current_liabilities": 1070301000,
+        "inventories": 781539000,
+        "cash": 424913000,
+        "long_term_debt": null
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 2200,
+      "company_name": "Arabian Pipes Co",
+      "sector": "Industrial",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Arabian_Pipes_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 1138273000,
+        "cost_of_revenue": 855083000,
+        "gross_profit": null,
+        "operating_income": 176061000,
+        "net_income": 168177000,
+        "total_assets": 931579000,
+        "total_liabilities": 530264000,
+        "total_equity": 401315000,
+        "current_assets": 632181000,
+        "current_liabilities": 432242000,
+        "inventories": 311681000,
+        "cash": 99403000,
+        "long_term_debt": null
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 2240,
+      "company_name": "Zamil Industrial Investment Co",
+      "sector": "Industrial",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Zamil_Industrial_Investment_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 6090496000,
+        "cost_of_revenue": 5031844000,
+        "gross_profit": null,
+        "operating_income": 98171000,
+        "net_income": 66649000,
+        "total_assets": 6033116000,
+        "total_liabilities": 5363929000,
+        "total_equity": 669187000,
+        "current_assets": 4933179000,
+        "current_liabilities": 5021682000,
+        "inventories": 1438895000,
+        "cash": 551735000,
+        "long_term_debt": 21335000
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 2250,
+      "company_name": "Saudi Industrial Investment Group",
+      "sector": "Industrial",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Saudi_Industrial_Investment_Group_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 85,
+      "confidence_notes": "Missing inventory (-15)",
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 183396000,
+        "cost_of_revenue": null,
+        "gross_profit": null,
+        "operating_income": 143627000,
+        "net_income": 201243000,
+        "total_assets": 10101448000,
+        "total_liabilities": 266931000,
+        "total_equity": 9834517000,
+        "current_assets": 1763302000,
+        "current_liabilities": 238432000,
+        "inventories": null,
+        "cash": 919068000,
+        "long_term_debt": null
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 3003,
+      "company_name": "City Cement Co",
+      "sector": "Industrial",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "City_Cement_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 85,
+      "confidence_notes": "Missing current assets/liabilities (-15)",
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 520836291,
+        "cost_of_revenue": null,
+        "gross_profit": null,
+        "operating_income": 157232033,
+        "net_income": 144119933,
+        "total_assets": 1894815077,
+        "total_liabilities": 99685045,
+        "total_equity": 1795130032,
+        "current_assets": null,
+        "current_liabilities": null,
+        "inventories": 156419480,
+        "cash": 42358215,
+        "long_term_debt": null
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 3005,
+      "company_name": "Umm Al-Qura Cement Co",
+      "sector": "Industrial",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Umm_Al-Qura_Cement_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 265590348,
+        "cost_of_revenue": 182667667,
+        "gross_profit": null,
+        "operating_income": 55925169,
+        "net_income": 47719184,
+        "total_assets": 1184205494,
+        "total_liabilities": 370612317,
+        "total_equity": 813593177,
+        "current_assets": 488837350,
+        "current_liabilities": 148018701,
+        "inventories": 438287750,
+        "cash": 35039724,
+        "long_term_debt": 200095467
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 3010,
+      "company_name": "Arabian Cement Co",
+      "sector": "Industrial",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Arabian_Cement_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 857855000,
+        "cost_of_revenue": 617381000,
+        "gross_profit": null,
+        "operating_income": 194004000,
+        "net_income": 194004000,
+        "total_assets": 3093532000,
+        "total_liabilities": 433745000,
+        "total_equity": 2659787000,
+        "current_assets": 1029118000,
+        "current_liabilities": 246210000,
+        "inventories": 636796000,
+        "cash": 145112000,
+        "long_term_debt": 56414000
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 3020,
+      "company_name": "Yamama Cement Co",
+      "sector": "Industrial",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Yamama_Cement_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 1172979234,
+        "cost_of_revenue": 643963232,
+        "gross_profit": null,
+        "operating_income": 433005984,
+        "net_income": 420705984,
+        "total_assets": 7316831953,
+        "total_liabilities": 2473498785,
+        "total_equity": 4843333168,
+        "current_assets": 1034535899,
+        "current_liabilities": 880603835,
+        "inventories": 559922722,
+        "cash": 61033582,
+        "long_term_debt": 1412280673
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 3040,
+      "company_name": "Qassim Cement Co",
+      "sector": "Industrial",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Qassim_Cement_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 967578131,
+        "cost_of_revenue": 634220361,
+        "gross_profit": null,
+        "operating_income": 329330723,
+        "net_income": 301349338,
+        "total_assets": 3137024070,
+        "total_liabilities": 373019979,
+        "total_equity": 2764004091,
+        "current_assets": 1538103575,
+        "current_liabilities": 279971693,
+        "inventories": 759699960,
+        "cash": 106802357,
+        "long_term_debt": null
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 3050,
+      "company_name": "Southern Province Cement Co",
+      "sector": "Industrial",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Southern_Province_Cement_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 85,
+      "confidence_notes": "Missing current assets/liabilities (-15)",
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 935028850,
+        "cost_of_revenue": 591711662,
+        "gross_profit": 343317188,
+        "operating_income": 270228723,
+        "net_income": 243746337,
+        "total_assets": 4428360089,
+        "total_liabilities": 1056891312,
+        "total_equity": 3371468777,
+        "current_assets": null,
+        "current_liabilities": null,
+        "inventories": 959097904,
+        "cash": 106413978,
+        "long_term_debt": 649158460
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 3060,
+      "company_name": "Yanbu Cement Co",
+      "sector": "Industrial",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Yanbu_Cement_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 85,
+      "confidence_notes": "Missing cost_of_revenue (-15)",
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 876126630,
+        "cost_of_revenue": null,
+        "gross_profit": null,
+        "operating_income": 172951948,
+        "net_income": 157120485,
+        "total_assets": 3250676464,
+        "total_liabilities": 644590239,
+        "total_equity": 2606086225,
+        "current_assets": 1095307954,
+        "current_liabilities": 490766873,
+        "inventories": 807032088,
+        "cash": 54950226,
+        "long_term_debt": 35750000
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 3080,
+      "company_name": "Eastern Province Cement Co",
+      "sector": "Industrial",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Eastern_Province_Cement_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 1210646000,
+        "cost_of_revenue": 836919000,
+        "gross_profit": null,
+        "operating_income": 275910000,
+        "net_income": 247883000,
+        "total_assets": 2764472000,
+        "total_liabilities": 470836000,
+        "total_equity": 2293636000,
+        "current_assets": 1361991000,
+        "current_liabilities": 330686000,
+        "inventories": 533447000,
+        "cash": 154751000,
+        "long_term_debt": null
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 3092,
+      "company_name": "Riyadh Cement Co",
+      "sector": "Industrial",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Riyadh_Cement_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 789396360,
+        "cost_of_revenue": 460629498,
+        "gross_profit": null,
+        "operating_income": 299239953,
+        "net_income": 310439020,
+        "total_assets": 1970469964,
+        "total_liabilities": 189220959,
+        "total_equity": 1781249005,
+        "current_assets": 758487015,
+        "current_liabilities": 155974135,
+        "inventories": 294236319,
+        "cash": 148702353,
+        "long_term_debt": null
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 4142,
+      "company_name": "Riyadh Cables Group Co",
+      "sector": "Industrial",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Riyadh_Cables_Group_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "needs_review",
+      "confidence_score": 60,
+      "confidence_notes": "Revenue/COGS anomaly - COGS far exceeds revenue (-20), Unit ambiguity (-10), Needs manual verification (-10)",
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 61191218,
+        "cost_of_revenue": 7720838516,
+        "gross_profit": null,
+        "operating_income": 880772455,
+        "net_income": 816881157,
+        "total_assets": 5811584098,
+        "total_liabilities": 3187707202,
+        "total_equity": 2623876896,
+        "current_assets": 4333848098,
+        "current_liabilities": 3048985171,
+        "inventories": 2126036688,
+        "cash": 90672725,
+        "long_term_debt": null
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      },
+      "issues": ["Revenue significantly smaller than COGS - likely extraction error or missing digits in revenue"]
+    },
+    {
+      "ticker": 1182,
+      "company_name": "Amlak International Finance Co",
+      "sector": "Finance",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Amlak_International_Finance_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 433343000,
+        "operating_income": -185829000,
+        "ebit": 58633000,
+        "net_income": 46314000,
+        "total_assets": 4512211000,
+        "total_liabilities": 3287492000,
+        "total_equity": 1224719000,
+        "cash": 32360000
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 1183,
+      "company_name": "SHL Finance Co",
+      "sector": "Finance",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "SHL_Finance_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 350474000,
+        "operating_income": -116370000,
+        "ebit": 33899000,
+        "net_income": 26528000,
+        "total_assets": 4513467000,
+        "total_liabilities": 2825829000,
+        "total_equity": 1687638000,
+        "cash": 69189000
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 4081,
+      "company_name": "Nayifat Finance Co",
+      "sector": "Finance",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Nayifat_Finance_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 362559000,
+        "ebit": 148986000,
+        "net_income": 131236000,
+        "total_assets": 2064758000,
+        "total_liabilities": 616773000,
+        "total_equity": 1447985000,
+        "cash": 86476000
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 7040,
+      "company_name": "Etihad Atheeb Telecommunication Co",
+      "sector": "Telecom",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Etihad_Atheeb_Telecommunication_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 1016118736,
+        "gross_profit": 305470474,
+        "operating_income": 305470474,
+        "ebit": 200663054,
+        "net_income": 194678385,
+        "total_assets": 1367348392,
+        "total_liabilities": 808435311,
+        "total_equity": 558913081,
+        "cash": 434998692
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 1111,
+      "company_name": "Saudi Tadawul Group Holding Co",
+      "sector": "Financial Services",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Saudi_Tadawul_Group_Holding_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 85,
+      "confidence_notes": "Missing total_equity (-15)",
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 1446558786,
+        "gross_profit": 911796308,
+        "operating_income": 911796308,
+        "ebit": 680719382,
+        "net_income": 620886006,
+        "total_assets": 9141225301,
+        "total_liabilities": 5649488136,
+        "total_equity": null,
+        "cash": 352183946
+      },
+      "balance_sheet_check": {
+        "status": "INCOMPLETE - Missing equity"
+      }
+    },
+    {
+      "ticker": 2280,
+      "company_name": "Almarai Co",
+      "sector": "Consumer",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Almarai_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 85,
+      "confidence_notes": "Missing liabilities/equity (-15)",
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 20979512000,
+        "gross_profit": 6664052000,
+        "operating_income": 6664052000,
+        "ebit": 2463327000,
+        "net_income": 2313667000,
+        "total_assets": 35567960000,
+        "total_liabilities": null,
+        "total_equity": null,
+        "cash": 491390000
+      },
+      "balance_sheet_check": {
+        "status": "INCOMPLETE - Missing liabilities and equity"
+      }
+    },
+    {
+      "ticker": 4161,
+      "company_name": "BinDawood Holding Co",
+      "sector": "Retail",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "BinDawood_Holding_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 5677685762,
+        "gross_profit": 1893784751,
+        "operating_income": 6293691,
+        "ebit": 299328172,
+        "net_income": 280245234,
+        "total_assets": 5264336226,
+        "total_liabilities": 3790615345,
+        "total_equity": 1473720881,
+        "cash": 429041321
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 4164,
+      "company_name": "Nahdi Medical Co",
+      "sector": "Retail",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Nahdi_Medical_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 9446420046,
+        "gross_profit": null,
+        "operating_income": 29446113,
+        "ebit": 834543624,
+        "net_income": 820723624,
+        "total_assets": 6173349244,
+        "total_liabilities": 3587246396,
+        "total_equity": 2586102848,
+        "cash": 956809579
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 4190,
+      "company_name": "Jarir Marketing Co",
+      "sector": "Retail",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Jarir_Marketing_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 10830921000,
+        "gross_profit": 1324459000,
+        "operating_income": 75591000,
+        "ebit": 1004520000,
+        "net_income": 973955000,
+        "total_assets": 4272694000,
+        "total_liabilities": 2527842000,
+        "total_equity": 1744852000,
+        "cash": 32835000
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 4200,
+      "company_name": "Aldrees Petroleum and Transport Services Co",
+      "sector": "Services",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Aldrees_Petroleum_and_Transport_Services_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 19288553013,
+        "gross_profit": 811218990,
+        "operating_income": 811218990,
+        "ebit": 346386115,
+        "net_income": 338047048,
+        "total_assets": 8443323301,
+        "total_liabilities": 6963835876,
+        "total_equity": 1479487425,
+        "cash": 241982102
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 4021,
+      "company_name": "Canadian Medical Center Co",
+      "sector": "Healthcare",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Canadian_Medical_Center_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 51224437,
+        "gross_profit": 11510465,
+        "operating_income": 11510465,
+        "ebit": 4851326,
+        "net_income": 3369746,
+        "total_assets": 117819119,
+        "total_liabilities": 29766154,
+        "total_equity": 88052965,
+        "cash": 45484462
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 4013,
+      "company_name": "Dr. Sulaiman Al Habib Medical Services Group",
+      "sector": "Healthcare",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Dr._Sulaiman_Al_Habib_Medical_Services_Group_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "needs_review",
+      "confidence_score": 50,
+      "confidence_notes": "Values suspiciously small - likely in millions not thousands (-20), Unit verification required (-20), Manual review needed (-10)",
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 11200430,
+        "gross_profit": 3744240,
+        "operating_income": 3744240,
+        "ebit": 2412840,
+        "net_income": 2369940,
+        "total_assets": 20557930,
+        "total_liabilities": 12945280,
+        "total_equity": 7612650,
+        "cash": 2890700
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      },
+      "issues": ["Revenue of 11.2M SAR is unrealistically low for a major hospital group - likely in millions, should be 11.2B SAR"]
+    },
+    {
+      "ticker": 1830,
+      "company_name": "Leejam Sports Co",
+      "sector": "Services",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Leejam_Sports_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 85,
+      "confidence_notes": "Missing total_equity (-15)",
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 1501366256,
+        "gross_profit": 623393041,
+        "operating_income": 623393041,
+        "ebit": 464352738,
+        "net_income": 454126331,
+        "total_assets": 3720933698,
+        "total_liabilities": 2482610108,
+        "total_equity": null,
+        "cash": 106103887
+      },
+      "balance_sheet_check": {
+        "status": "INCOMPLETE - Missing equity"
+      }
+    },
+    {
+      "ticker": 6001,
+      "company_name": "Almunajem Foods Co",
+      "sector": "Consumer",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Almunajem_Foods_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 100,
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 3346984084,
+        "gross_profit": 566424452,
+        "operating_income": 14385332,
+        "ebit": 290431621,
+        "net_income": 278652929,
+        "total_assets": 1936244945,
+        "total_liabilities": 926270129,
+        "total_equity": 1009974816,
+        "cash": 42628379
+      },
+      "balance_sheet_check": {
+        "assets_minus_sum": 0,
+        "variance_pct": 0.0,
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": 4220,
+      "company_name": "Emaar The Economic City",
+      "sector": "Real Estate",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Emaar_The_Economic_City_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 85,
+      "confidence_notes": "Missing equity (-15), Net loss reported",
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 425970000,
+        "gross_profit": -118548000,
+        "operating_income": 95785000,
+        "ebit": -1058533000,
+        "net_income": -1134565000,
+        "total_assets": 15090660000,
+        "total_liabilities": 9823749000,
+        "total_equity": null,
+        "cash": 252367000
+      },
+      "balance_sheet_check": {
+        "status": "INCOMPLETE - Missing equity"
+      }
+    },
+    {
+      "ticker": 4072,
+      "company_name": "MBC Group Co",
+      "sector": "Media",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "MBC_Group_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "valid",
+      "confidence_score": 85,
+      "confidence_notes": "Missing equity (-15)",
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 3536943000,
+        "gross_profit": 1204176000,
+        "operating_income": 1204176000,
+        "ebit": 435973000,
+        "net_income": 426130000,
+        "total_assets": 8557603000,
+        "total_liabilities": 4369745000,
+        "total_equity": null,
+        "cash": 1493987000
+      },
+      "balance_sheet_check": {
+        "status": "INCOMPLETE - Missing equity"
+      }
+    },
+    {
+      "ticker": 4240,
+      "company_name": "Fawaz Abdulaziz Alhokair Co",
+      "sector": "Retail",
+      "fiscal_year": 2024,
+      "period_type": "annual",
+      "source_file": "Fawaz_Abdulaziz_Alhokair_Co_FYE_2024.xlsx",
+      "extraction_date": "2026-02-03",
+      "validation_status": "rejected",
+      "confidence_score": 0,
+      "confidence_notes": "Negative equity (liabilities exceed assets) - automatic rejection",
+      "data_freshness": "current",
+      "normalized_financials_sar": {
+        "revenue": 4844508690,
+        "gross_profit": 631522370,
+        "operating_income": 279010063,
+        "ebit": -84531239,
+        "net_income": -145133628,
+        "total_assets": 4585690106,
+        "total_liabilities": 5603825678,
+        "total_equity": null,
+        "cash": 256211534
+      },
+      "balance_sheet_check": {
+        "status": "FAIL - Liabilities exceed assets by 1,018,135,572 SAR"
+      },
+      "rejection_reason": "Balance sheet integrity failure - company appears technically insolvent"
+    }
+  ],
+  "insurance_records_stale": [
+    {
+      "note": "ALL 24 insurance records excluded from insert-ready output due to data staleness (FY2017-2022)",
+      "recommendation": "Re-extract with FY2024 source files",
+      "tickers_excluded": [8010, 8012, 8020, 8030, 8040, 8050, 8060, 8070, 8100, 8120, 8150, 8160, 8170, 8180, 8190, 8200, 8230, 8240, 8250, 8260, 8280, 8300, 8310, 8311]
+    }
+  ]
+}

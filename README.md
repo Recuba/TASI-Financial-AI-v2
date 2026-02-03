@@ -10,6 +10,12 @@ A powerful natural language interface for querying Saudi Stock Exchange (TASI) f
 
 - **Natural Language Queries**: Ask questions like "Show me the top 10 most profitable companies" or "Compare sector performance by ROE"
 - **AI-Powered SQL Generation**: Converts natural language to optimized PostgreSQL queries using Gemini Flash 2.5
+- **Fresh 2024 Data**: Newly extracted 2024 annual financial data for 36 TASI companies
+  - 6 Banks (Riyad Bank, Bank Aljazira, Saudi Investment Bank, Saudi Awwal Bank, Bank Albilad, Alinma Bank)
+  - 15 Industrial companies (cement manufacturers and industrial groups)
+  - 7 Consumer & Retail companies (Almarai, Jarir, Nahdi, BinDawood, etc.)
+  - 3 Finance companies
+  - Plus Real Estate, Media, Telecom, and Healthcare sectors
 - **Real-Time Financial Data**: Access comprehensive TASI financial metrics including:
   - Revenue, Net Profit, Assets, Equity
   - ROE, Net Margin, Current Ratio, Debt-to-Equity
@@ -184,10 +190,102 @@ venna-ai/
 └── data/                # Data files
 ```
 
+## Data Extraction & Updates
+
+### 2024 Data Extraction
+
+The platform includes automated extraction capabilities to pull fresh financial data from company reports. The latest extraction was performed on **February 3, 2026**, adding 2024 annual financial data for 36 companies.
+
+### Companies with 2024 Data
+
+**Banks (6):**
+- Riyad Bank (1010)
+- Bank Aljazira (1020)
+- Saudi Investment Bank (1030)
+- Saudi Awwal Bank (1040)
+- Bank Albilad (1140)
+- Alinma Bank (1150)
+
+**Industrial Companies (15):**
+- Arabian Cement Co (3020)
+- Yamama Cement Co (3090)
+- Yanbu Cement Co (3060)
+- City Cement Co (3003)
+- Southern Province Cement Co (3050)
+- Umm Al-Qura Cement Co (3040)
+- Qassim Cement Co (3010)
+- Riyadh Cement Co (3010)
+- Eastern Province Cement Co (3080)
+- Arabian Pipes Co (1304)
+- Zamil Industrial Investment Co (2240)
+- Saudi Industrial Investment Group (2250)
+- Astra Industrial Group (1212)
+- Bawan Co (2090)
+- United Wire Factories Co (2180)
+
+**Consumer & Retail (7):**
+- Almarai Co (2280)
+- Jarir Marketing Co (4190)
+- Nahdi Medical Co (4164)
+- BinDawood Holding Co (4161)
+- Leejam Sports Co (4231)
+- Aldrees Petroleum and Transport Services Co (4200)
+- Almunajem Foods Co (2271)
+
+**Other Sectors (8):**
+- Amlak International Finance Co (4310)
+- Nayifat Finance Co (4080)
+- SHL Finance Co (4130)
+- Emaar The Economic City (4220)
+- MBC Group Co (4210)
+- Etihad Atheeb Telecommunication Co (7040)
+- Canadian Medical Center Co (4004)
+- Saudi Tadawul Group Holding Co (1111)
+
+### Re-Running Data Extraction
+
+To extract new financial data or update existing data:
+
+1. **Prepare source files**: Place Excel/PDF financial reports in the `data/extracted/` directory
+2. **Process and validate**: Extract data from financial reports and save to `data/extracted/INSERT_READY.csv`
+3. **Run the insertion script** to load data into the database:
+   ```bash
+   python scripts/insert_extracted_data.py
+   ```
+4. **Verify the results**: The script will provide a detailed summary of:
+   - New records inserted
+   - Existing records updated
+   - Duplicate records skipped
+   - Final database record count
+
+The insertion script automatically:
+- Calculates derived financial metrics (ROE, margins, ratios)
+- Validates data integrity
+- Prevents duplicate entries
+- Updates records with newer extraction dates
+- Generates detailed logs in `data/insertion_log_[date].txt`
+
+### Data Quality Standards
+
+All extracted data undergoes rigorous validation:
+- ✅ **Completeness checks**: Verifying all key financial metrics are present
+- ✅ **Data type validation**: Ensuring numerical values are properly formatted
+- ✅ **Range validation**: Flagging outliers and unusual values
+- ✅ **Cross-referencing**: Validating against known company information
+- ✅ **Confidence scoring**: Each extraction is scored for reliability
+
 ## Example Queries
 
 Try these natural language queries:
 
+**2024 Data Queries:**
+- "Show me bank performance in 2024"
+- "Compare Riyad Bank vs Alinma Bank 2024"
+- "Which industrial companies have 2024 data?"
+- "Show me the top 5 cement companies by revenue in 2024"
+- "List all companies with 2024 annual data"
+
+**General Queries:**
 - "Show me the top 10 most profitable companies"
 - "Which companies have the highest ROE?"
 - "Compare sector performance by average revenue"
