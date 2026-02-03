@@ -29,14 +29,23 @@ def get_config(key: str, default: str = None) -> str:
     """Get config from Streamlit secrets first, then environment variables."""
     # Try Streamlit secrets first (for Streamlit Cloud)
     try:
-        if key in st.secrets:
+        if hasattr(st, 'secrets') and key in st.secrets:
             return st.secrets[key]
     except Exception:
         pass
     # Fall back to environment variables (for local development)
     return os.getenv(key, default)
 
-DATABASE_URL = get_config("DATABASE_URL", "postgresql://tasi:tasi_dev_123@localhost:5433/tasi_financials")
+# Check if running on Streamlit Cloud (no localhost access)
+_is_streamlit_cloud = os.path.exists("/mount/src")
+
+DATABASE_URL = get_config("DATABASE_URL")
+if not DATABASE_URL:
+    if _is_streamlit_cloud:
+        st.error("DATABASE_URL not configured! Go to Settings → Secrets and add your database URL.")
+        st.stop()
+    else:
+        DATABASE_URL = "postgresql://tasi:tasi_dev_123@localhost:5433/tasi_financials"
 OPENROUTER_API_KEY = get_config("OPENROUTER_API_KEY")
 CHROMA_PERSIST_DIR = Path(__file__).parent / "chroma_db"
 
