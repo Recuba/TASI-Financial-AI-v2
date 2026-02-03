@@ -418,60 +418,134 @@ Your task is to convert natural language questions into PostgreSQL queries.
 
 
 # =============================================================================
-# Interactive CLI
+# Streamlit App
 # =============================================================================
 
+from components.sidebar import render_sidebar, render_2024_data_status
+from components.chat import (
+    initialize_chat_history,
+    add_to_chat_history,
+    render_chat_history,
+    render_chat_input,
+    render_user_message,
+    render_ai_response,
+)
+from components.example_questions import render_example_questions
+
+
 def main():
-    """Interactive CLI for the TASI Financial Agent."""
-    print("=" * 60)
-    print("TASI Financial Database - Vanna AI Agent")
-    print("Powered by Gemini Flash 2.5 via OpenRouter")
-    print("=" * 60)
-    print("\nInitializing agent...")
+    """Streamlit web app for TASI Financial Agent."""
+    # Page config
+    st.set_page_config(
+        page_title="Venna AI - TASI Financial Analytics",
+        page_icon="📊",
+        layout="wide",
+        initial_sidebar_state="expanded",
+    )
 
-    agent = TASIFinancialAgent()
+    # Custom CSS for Saudi theme
+    st.markdown("""
+        <style>
+        .stApp {
+            background-color: #fafafa;
+        }
+        .main-header {
+            background: linear-gradient(135deg, #006C35 0%, #00A651 100%);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+        .main-header h1 {
+            color: white;
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        .main-header p {
+            color: rgba(255,255,255,0.9);
+            margin: 0.5rem 0 0 0;
+        }
+        .results-count {
+            background: #D4A84B;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .error-banner {
+            background: #fee2e2;
+            border-left: 4px solid #dc2626;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+        .error-banner-title {
+            color: #dc2626;
+            font-weight: 600;
+        }
+        .error-banner-message {
+            color: #7f1d1d;
+        }
+        </style>
+    """, unsafe_allow_html=True)
 
-    print("Agent ready! Ask questions about TASI-listed companies.")
-    print("Type 'quit' or 'exit' to stop.\n")
-    print("Example questions:")
-    print("  - Show me the top 10 most profitable companies")
-    print("  - Which companies have the highest ROE?")
-    print("  - Compare sector performance")
-    print("  - Show insurance companies with losses")
-    print()
+    # Sidebar
+    with st.sidebar:
+        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Saudi_Arabia_Flag.svg/125px-Saudi_Arabia_Flag.svg.png", width=60)
+        st.title("Venna AI")
+        st.caption("TASI Financial Analytics")
+        st.divider()
+        render_2024_data_status()
+        st.divider()
+        st.markdown("**Settings**")
+        show_sql = st.checkbox("Show SQL queries", value=True)
 
-    while True:
-        try:
-            question = input("\nYour question: ").strip()
+    # Main header
+    st.markdown("""
+        <div class="main-header">
+            <h1>📊 TASI Financial Analytics</h1>
+            <p>Ask questions about Saudi stock market companies in natural language</p>
+        </div>
+    """, unsafe_allow_html=True)
 
-            if not question:
-                continue
+    # Initialize
+    initialize_chat_history()
 
-            if question.lower() in ('quit', 'exit', 'q'):
-                print("Goodbye!")
-                break
+    # Initialize agent (cached)
+    @st.cache_resource
+    def get_agent():
+        return TASIFinancialAgent()
 
-            if question.lower() == 'schema':
-                print("\nDatabase Schema:")
-                print(agent.schema)
-                continue
+    try:
+        agent = get_agent()
+    except Exception as e:
+        st.error(f"Failed to initialize agent: {e}")
+        st.stop()
 
-            # Ask the question
-            result = agent.ask(question)
+    # Example questions
+    selected_example = render_example_questions()
 
-            if result["success"]:
-                print("\nResults:")
-                print(agent.format_results(result["results"]))
-            else:
-                print(f"\nError: {result['error']}")
-                if result["sql"]:
-                    print(f"SQL attempted: {result['sql']}")
+    # Chat history
+    render_chat_history(show_sql=show_sql)
 
-        except KeyboardInterrupt:
-            print("\n\nInterrupted. Goodbye!")
-            break
-        except Exception as e:
-            print(f"\nError: {e}")
+    # Chat input
+    user_query = render_chat_input()
+
+    # Handle example question click or chat input
+    query = selected_example or user_query
+
+    if query:
+        # Add user message
+        add_to_chat_history("user", query)
+        render_user_message(query)
+
+        # Get response
+        with st.chat_message("ai"):
+            with st.spinner("Analyzing..."):
+                result = agent.ask(query)
+
+            render_ai_response(result, show_sql=show_sql)
+            add_to_chat_history("assistant", "", result)
 
 
 if __name__ == "__main__":
